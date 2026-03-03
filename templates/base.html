@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prosperity System Hub | Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/solutions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =====================[NAVIGATION SECTION]===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('main.home') }}" class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+            </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="{{ url_for('main.solutions') }}" class="nav-link">Solutions</a></li>
+                <li class="nav-item"><a href="{{ url_for('main.how') }}" class="nav-link">How It Works</a></li>
+                <li class="nav-item"><a href="{{ url_for('main.about') }}" class="nav-link"><span>About Us</span>
+                        <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></a>
+                    <ul>
+                        <li class="nav-item"><a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission &
+                                Vision</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.leadership') }}" class="nav-link">Leadership &
+                                Teams</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.contact') }}" class="nav-link">Contact</a>
+
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- =====================[FOOTER SECTION]===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="wordmark">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="footer-logo">
+                    </div>
+                    <p>Infrastructure for prosperity</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li class="nav-item"><a href="{{ url_for('main.about') }}" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.leadership') }}" class="nav-link">Leadership &
+                                Teams</a>
+                        </li>
+                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
+                                Overview</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
+                <div>
+                    <a href="{{ url_for('main.privacy') }}">Privacy</a>
+                    <a href="{{ url_for('main.security') }}">Security</a>
+                    <a href="{{ url_for('main.contact') }}">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+{% block scripts %}
+<script>
+    // Mobile Menu Toggle with smooth animation
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navbar = document.getElementById('navbar');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+
+        // Add animation to menu items when opening
+        if (navMenu.classList.contains('active')) {
+            const menuItems = navMenu.querySelectorAll('.nav-item');
+            menuItems.forEach((item, index) => {
+                item.style.animation = `slideIn 0.4s ease-out ${index * 0.1}s both`;
+            });
+        }
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Scroll reveal animation (optional)
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll('.reveal');
+
+        reveals.forEach(element => {
+            const windowHeight = window.innerHeight;
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+
+    // Add floating animation to icons on hover
+    document.querySelectorAll('.nav-link i, .footer-links i').forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+            icon.style.animation = 'float 1s ease-in-out infinite';
+        });
+
+        icon.addEventListener('mouseleave', () => {
+            icon.style.animation = '';
+        });
+    });
+
+    // Add pulse animation to footer logo
+    const footerLogo = document.querySelector('.footer-logo');
+    if (footerLogo) {
+        setInterval(() => {
+            footerLogo.style.animation = 'pulse 2s ease-in-out';
+            setTimeout(() => {
+                footerLogo.style.animation = '';
+            }, 2000);
+        }, 5000);
+    }
+</script>
+{% endblock %}
+
+</html>

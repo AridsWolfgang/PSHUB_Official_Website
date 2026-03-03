@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<!-- 
+██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
+██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
+██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
+██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
+-->
+
+
+<!-- ===================== HERO ===================== -->
+<section class="hero animated-bg">
+    <div class="hero-compound">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Designing and Operating Prosperity Systems at Institutional Scale.
+            </h1>
+            <p class="hero-description">
+                A structured operating model that transforms fragmented initiatives
+                into measurable economic infrastructure.
+            </p>
+            <a href="#process" class="btn hero-btn">Explore the Model</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== CONTEXT ===================== -->
+<section id="context">
+    <div class="container problem-grid">
+        <div class="problem-left">
+            <h2>Prosperity fails when systems are misaligned.</h2>
+            <p class="supporting-copy">
+                Workforce programs, funding mechanisms, and institutions often operate independently.
+                Without alignment, economic impact remains isolated and temporary.
+            </p>
+        </div>
+        <div class="proof-list">
+            <div class="proof-item">Disconnected education-to-employment pathways</div>
+            <div class="proof-item">Capital deployed without performance visibility</div>
+            <div class="proof-item">Institutions operating in silos</div>
+            <div class="proof-item">Programs without compounding logic</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== OPERATING MODEL ===================== -->
+<section id="process">
+    <div class="container">
+        <h2 class="text-center">The PSHub Operating Model</h2>
+
+        <div class="flow-diagram">
+
+            <div class="flow-step">
+                <div class="step-number">01</div>
+                <h4>System Diagnosis</h4>
+                <p>
+                    Institutional mapping of workforce initiatives, capital flows,
+                    policy structures, and economic bottlenecks.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-number">02</div>
+                <h4>Architecture & Design</h4>
+                <p>
+                    Design integrated opportunity pipelines aligned with
+                    labor demand, institutional mandates, and funding mechanisms.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-number">03</div>
+                <h4>Platform Integration</h4>
+                <p>
+                    Digitally connect governments, employers, training providers,
+                    and capital allocators within a unified intelligence layer.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-number">04</div>
+                <h4>Execution & Coordination</h4>
+                <p>
+                    Operationalize governance frameworks and delivery mechanisms
+                    under a single coordinated operating model.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <div class="step-number">05</div>
+                <h4>Measurement & Optimization</h4>
+                <p>
+                    Continuous performance feedback loops to optimize employment outcomes,
+                    capital efficiency, and long-term economic returns.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SYSTEM LOGIC ===================== -->
+<section id="logic">
+    <div class="container">
+        <h2 class="text-center">Institutional Design Principles</h2>
+
+        <div class="platform-grid">
+
+            <div class="platform-card">
+                <h3>Demand-Led</h3>
+                <p>
+                    Opportunity pipelines begin with verified labor and market demand,
+                    not program supply.
+                </p>
+            </div>
+
+            <div class="platform-card">
+                <h3>Data-Governed</h3>
+                <p>
+                    Real-time intelligence informs policy adjustments,
+                    funding allocation, and institutional coordination.
+                </p>
+            </div>
+
+            <div class="platform-card">
+                <h3>Capital-Efficient</h3>
+                <p>
+                    Public and private capital is deployed through
+                    validated, performance-linked pathways.
+                </p>
+            </div>
+
+            <div class="platform-card">
+                <h3>Compounding by Design</h3>
+                <p>
+                    Systems are structured to produce increasing economic returns
+                    over time rather than one-off outcomes.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===================== IMPACT LAYER ===================== -->
+<section id="impact">
+    <div class="container">
+        <h2 class="text-center">What This Enables</h2>
+
+        <div class="segments">
+            <div class="segment-pill">Transparent Workforce Flows</div>
+            <div class="segment-pill">Aligned Institutional Incentives</div>
+            <div class="segment-pill">Accountable Capital Deployment</div>
+            <div class="segment-pill">Measurable Economic Growth</div>
+            <div class="segment-pill">Long-Term System Compounding</div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section id="demo">
+    <div class="final-cta">
+        <h2>Prosperity works when systems do.</h2>
+        <a href="briefing.html" class="btn btn-primary btn-large">
+            Book a Strategic Briefing
+        </a>
+    </div>
+</section>
+{% endblock %}

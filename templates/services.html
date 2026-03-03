@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- 
+██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
+██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
+██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
+██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
+-->
+
+<!-- =====================[PRODUCT HERO SECTION]===================== -->
+<section class="hero animated-bg">
+    <div class="hero-compound">
+        <div class="hero-content">
+            <br><br>
+            <h1 class="hero-title">The Operating System for National & Institutional Prosperity.</h1>
+            <p class="hero-description">
+                Prosperity System Hub is an integrated infrastructure platform that aligns institutions,
+                capital, and workforce pipelines into one measurable system.
+            </p>
+            <a href="#architecture" class="btn hero-btn">Explore Architecture</a>
+            <a href="#modules" class="btn hero-btn">View Core Modules</a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CORE ARCHITECTURE SECTION]===================== -->
+<section id="architecture">
+    <div class="container">
+        <h2 class="product-title">Core Architecture</h2>
+        <p>Prosperity System Hub is built on three core architectural layers:</p>
+        <div class="platform-box">
+            <div class="platform-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Opportunity Layer</h3>
+                <p>
+                    Maps citizens, skills, programs, employers, and financing into a
+                    single opportunity pipeline architecture.
+                </p>
+            </div>
+            <div class="platform-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Coordination Layer</h3>
+                <p>
+                    Aligns ministries, institutions, financial actors, and delivery partners
+                    inside one interoperable framework.
+                </p>
+            </div>
+            <div class="platform-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Intelligence Layer</h3>
+                <p>
+                    Provides real-time visibility into talent flows, employment outcomes,
+                    capital efficiency, and systemic performance.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CORE MODULES SECTION]===================== -->
+<section id="modules">
+    <div class="container">
+        <h2 class="text-center">Core Modules</h2>
+        <p>Each module is designed to support a specific aspect of the Prosperity System Hub ecosystem:</p>
+        <div class="platform-grid mt-2">
+            <div class="platform-card">
+                <h3>SLP+</h3>
+                <p>Strategic Labor Pipeline system for workforce visibility and alignment.</p>
+            </div>
+            <div class="platform-card">
+                <h3>DLX+</h3>
+                <p>Digital labor exchange and institutional integration engine.</p>
+            </div>
+            <div class="platform-card">
+                <h3>Capital Feedback Engine</h3>
+                <p>Tracks deployment impact and compounds return through performance loops.</p>
+            </div>
+            <div class="platform-card">
+                <h3>Institutional Control Panel</h3>
+                <p>Executive-level dashboards for ministries, banks, and economic operators.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[DEPLOYMENT MODEL SECTION]===================== -->
+<section id="deployment">
+    <div class="container">
+        <h2>Deployment Models</h2>
+        <p>Prosperity System Hub can be deployed in multiple configurations depending on the needs of the implementing organization:</p>
+        <div class="flow-diagram">
+            <div class="flow-step">
+                <div class="step-number">01</div>
+                <h4>National Deployment</h4>
+                <p>Full-stack integration across ministries and public institutions.</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">02</div>
+                <h4>Regional / City Model</h4>
+                <p>Localized economic operating system for regional growth.</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">03</div>
+                <h4>Sector Deployment</h4>
+                <p>Focused implementation for priority industries and labor segments.</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-number">04</div>
+                <h4>Institutional Layer</h4>
+                <p>Standalone deployment for banks, funds, and workforce authorities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

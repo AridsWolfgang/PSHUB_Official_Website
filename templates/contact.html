@@ -1,0 +1,366 @@
+{% extends "base.html" %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<!-- 
+██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
+██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
+██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
+██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
+-->
+
+<!-- =====================[CONTACT HERO]===================== -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
+            <h1>Get in Touch</h1>
+            <p>Our team is ready to discuss how Prosperity System Hub can help you build measurable economic
+                infrastructure.</p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CONTACT GRID]===================== -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Send a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span>*</span></label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span>*</span></label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Work Email <span>*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization">Organization <span>*</span></label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country/Region</label>
+                        <select id="country" name="country">
+                            <option value="">Select your country</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="AU">Australia</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="JP">Japan</option>
+                            <option value="SG">Singapore</option>
+                            <option value="AE">UAE</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type <span>*</span></label>
+                        <select id="inquiryType" name="inquiryType" required>
+                            <option value="">Select an option</option>
+                            <option value="demo">Request a Demo</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="support">Technical Support</option>
+                            <option value="press">Press Inquiry</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree to the <a href="/privacy">Privacy Policy</a> and consent to
+                            being contacted regarding Prosperity System Hub services.</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info-wrapper">
+                <div class="contact-info-card">
+                    <h3>Contact Information</h3>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Headquarters</h4>
+                                <p>200 Park Avenue, Suite 1700<br>New York, NY 10166, USA</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+12125551234">+1 (212) 555-1234</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact@pshub.io">contact@pshub.io</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM EST<br>Weekend: By appointment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[MAP SECTION]===================== -->
+<section class="map-section">
+    <div class="container">
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.216513924982!2d-74.01588792409636!3d40.74879297139138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259b3f7d2f8c3%3A0x6f0b7d3b5e3b2d3b!2s200%20Park%20Ave%2C%20New%20York%2C%20NY%2010166!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[FAQ SECTION]===================== -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How quickly can we expect a response?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our team typically responds within 24 business hours. For urgent inquiries, please mention
+                        "URGENT" in your message subject.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you offer demos for government institutions?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide tailored demonstrations for government agencies, development banks, and
+                        public institutions. Please specify your requirements in the message.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Can we schedule a technical consultation?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Our solutions architects are available for technical deep-dives. Select "Request
+                        a Demo" and mention your technical interests.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What are your security and compliance standards?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>We maintain SOC 2 Type II certification, GDPR compliance, and enterprise-grade security
+                        protocols. Our security team can provide detailed documentation upon request.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CTA SECTION]===================== -->
+<section class="contact-cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to transform your prosperity infrastructure?</h2>
+            <p>Schedule a strategic briefing with our team</p>
+            <a href="/briefing" class="btn-cta">
+                <span>Book a Consultation</span>
+                <i class="fas fa-calendar-check"></i>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Basic form validation
+                const requiredFields = contactForm.querySelectorAll('[required]');
+                let isValid = true;
+
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#dc2626';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '#e2e8f0';
+                    }
+                });
+
+                if (!isValid) {
+                    showNotification('Please fill in all required fields', 'error');
+                    return;
+                }
+
+                // Simulate form submission
+                const submitBtn = contactForm.querySelector('.btn-submit');
+                const originalText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+
+                // Simulate API call (replace with actual form submission)
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitBtn.style.background = '#10b981';
+
+                    showNotification('Thank you for contacting us. We\'ll respond within 24 hours.', 'success');
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Reset button after delay
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }, 1500);
+            });
+        }
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Notification function
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                    <span>${message}</span>
+                `;
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 5000);
+        }
+
+        // Input validation styling
+        const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('input', function () {
+                this.style.borderColor = '#e2e8f0';
+            });
+
+            input.addEventListener('invalid', function (e) {
+                e.preventDefault();
+                this.style.borderColor = '#dc2626';
+            });
+        });
+    });
+</script>
+{% endblock %}

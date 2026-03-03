@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Strategic Briefing | Prosperity System Hub</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<!-- 
+██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
+██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
+██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
+██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
+-->
+
+<body>
+    <!-- =====================[NAVIGATION SECTION]===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
+                <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li class="nav-item"><a href="how.html" class="nav-link">How It Works</a></li>
+                <li class="nav-item"><a href="intelligence.html" class="nav-link">Intelligence</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =====================[HERO / CTA SECTION]===================== -->
+    <section class="hero animated-bg" id="briefing-hero">
+        <div class="hero-compound">
+            <div class="hero-content">
+                <h1 class="hero-title">Book Your Strategic Briefing</h1>
+                <p class="hero-description">Discover how Prosperity System Hub can transform your workforce, institutions, and markets through integrated systems and actionable insights.</p>
+                <a href="#booking-form" class="btn hero-btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================[INFORMATION SECTION]===================== -->
+    <section id="why-briefing">
+        <div class="container">
+            <h2>Why Schedule a Briefing?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Tailored Solutions</h3>
+                    <p>Understand how our platform can solve your organization’s unique challenges.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Actionable Insights</h3>
+                    <p>Get a clear roadmap of measurable economic outcomes and workforce improvements.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Expert Guidance</h3>
+                    <p>Work directly with our team to align systems, institutions, and partners effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================[BOOKING FORM SECTION]===================== -->
+    <section id="booking-form">
+        <div class="container form-container">
+            <h2>Reserve Your Spot</h2>
+            <p>Please fill out the form below, and a member of our team will contact you to schedule your briefing.</p>
+
+            <form action="https://formsubmit.io/send/youremail@example.com" method="POST" class="cta-form">
+                <!-- Name -->
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                <!-- Organization -->
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" name="organization" placeholder="Your Organization" required>
+
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <!-- Phone -->
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                <!-- Type of Briefing -->
+                <label for="type">Type of Briefing</label>
+                <select id="type" name="type" required>
+                    <option value="">Select One</option>
+                    <option value="Government">Government / Public Authority</option>
+                    <option value="Bank">Development Bank / Fund</option>
+                    <option value="Enterprise">Large Employer / Enterprise</option>
+                    <option value="City Operator">Regional / City Operator</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <!-- Additional Notes -->
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Anything else you'd like us to know..."></textarea>
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary btn-large">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- =====================[CONTACT INFO / SUPPORT]===================== -->
+    <section id="contact-info">
+        <div class="container contact-grid">
+            <div>
+                <h3>Email</h3>
+                <p><a href="mailto:Officeedgefacilitymanagement@gmail.com">Officeedgefacilitymanagement@gmail.com</a></p>
+            </div>
+            <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+2348137830964">+234 813 783 0964</a></p>
+            </div>
+            <div>
+                <h3>Office</h3>
+                <p>Sokoto, Nigeria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================[FOOTER SECTION]===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="wordmark">
+                        <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
+                    </div>
+                    <p>Infrastructure for prosperity</p>
+                </div>
+                <div>
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="overview.html">Platform Overview</a></li>
+                        <li><a href="modules.html">Core Modules</a></li>
+                        <li><a href="deployment.html">Deployment Models</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="governments.html">Governments</a></li>
+                        <li><a href="banks.html">Banks & Funds</a></li>
+                        <li><a href="enterprise.html">Enterprise</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
+                <div>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="security.html">Security</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="./scripts/main.js"></script>
+
+</html>
