@@ -1,228 +1,495 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Careers | Prosperity System Hub</title>
-</head>
+{% block styles %}
 
-<!-- 
-██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
-██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
-██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
-██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
-██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
-╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
--->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/careers.css') }}">
 
-<body>
+{% endblock %}
 
-    <!-- ===================== NAVIGATION ===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
-            </a>
+{% block content %}
+<!-- =====================[CAREERS HERO]===================== -->
+<section class="careers-hero">
+    <div class="container">
+        <div class="careers-hero-content">
+            <span class="hero-badge">Join Our Mission</span>
+            <h1>Build Prosperity Infrastructure</h1>
+            <p>Work at the intersection of government, finance, and technology to design systems that transform
+                economies.</p>
+        </div>
+    </div>
+</section>
 
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<!-- =====================[WHY JOIN US]===================== -->
+<section class="why-join-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Why Join Us</span>
+            <h2>Work That Matters</h2>
+            <p>Build systems that operate at institutional scale and compound impact across generations.</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Global Impact</h3>
+                <p>Work across 15+ countries with governments, development banks, and major institutions.</p>
             </div>
 
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
-                <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
-                <li class="nav-item"><a href="how.html" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="intelligence.html" class="nav-link">Intelligence</a></li>
-            </ul>
-        </div>
-    </nav>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Measurable Outcomes</h3>
+                <p>See the direct impact of your work in tracked employment gains and economic growth.</p>
+            </div>
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero animated-bg">
-        <div class="hero-compound">
-            <div class="hero-content">
-                <h1 class="hero-title">Build systems that shape economies.</h1>
-                <p class="hero-description">
-                    Join Prosperity System Hub and contribute to designing
-                    long-term infrastructure that converts potential into measurable prosperity.
-                </p>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Exceptional Team</h3>
+                <p>Collaborate with former government leaders, finance experts, and top technologists.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Long-term Perspective</h3>
+                <p>Build systems designed for decades, not quarters. Real, sustainable change takes time.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===================== WHY JOIN ===================== -->
-    <section id="why-join">
-        <div class="container">
-            <h2 class="text-center">Why Work With PSHub</h2>
+<!-- =====================[LIFE AT PSHUB]===================== -->
+<section class="life-section">
+    <div class="container">
+        <div class="life-grid">
+            <div class="life-content">
+                <span class="section-badge">Life at PSHub</span>
+                <h2>Culture of Purpose</h2>
+                <p>We're united by a shared mission: building infrastructure that converts potential into prosperity.
+                    This drives everything we do.</p>
 
-            <div class="platform-grid">
-                <div class="platform-card">
-                    <h3>Mission With Scale</h3>
-                    <p>
-                        Work on national and institutional systems that
-                        influence workforce, capital, and economic participation.
-                    </p>
-                </div>
-
-                <div class="platform-card">
-                    <h3>Systems-Level Thinking</h3>
-                    <p>
-                        Move beyond isolated products and programs —
-                        contribute to integrated infrastructure design.
-                    </p>
-                </div>
-
-                <div class="platform-card">
-                    <h3>Long-Term Impact</h3>
-                    <p>
-                        Help create pipelines that compound opportunity
-                        across regions, institutions, and industries.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== WHO WE LOOK FOR ===================== -->
-    <section id="who-we-seek">
-        <div class="container">
-            <h2 class="text-center">Who We Look For</h2>
-            <p class="supporting-copy text-center">
-                We seek builders, operators, and analysts who think in systems —
-                not silos.
-            </p>
-
-            <div class="proof-list">
-                <div class="proof-item">Strategic systems thinkers</div>
-                <div class="proof-item">Policy and institutional operators</div>
-                <div class="proof-item">Data and intelligence architects</div>
-                <div class="proof-item">Enterprise and capital strategists</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== OPEN ROLES ===================== -->
-    <section id="open-roles">
-        <div class="container">
-            <h2 class="text-center">Open Roles</h2>
-
-            <div class="platform-grid">
-
-                <div class="platform-card">
-                    <h3>Systems Strategy Lead</h3>
-                    <p>
-                        Lead design of multi-stakeholder economic pipelines
-                        across workforce, capital, and institutional networks.
-                    </p>
-                    <a href="#" class="btn btn-outline">View Role</a>
-                </div>
-
-                <div class="platform-card">
-                    <h3>Intelligence & Analytics Specialist</h3>
-                    <p>
-                        Develop and manage performance intelligence systems
-                        for institutional deployments.
-                    </p>
-                    <a href="#" class="btn btn-outline">View Role</a>
-                </div>
-
-                <div class="platform-card">
-                    <h3>Institutional Partnerships Manager</h3>
-                    <p>
-                        Build relationships with governments, development banks,
-                        and enterprise leaders.
-                    </p>
-                    <a href="#" class="btn btn-outline">View Role</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== CULTURE PRINCIPLES ===================== -->
-    <section id="culture">
-        <div class="container">
-            <h2 class="text-center">How We Operate</h2>
-
-            <div class="platform-grid">
-                <div class="platform-card">
-                    <h3>Institutional Rigor</h3>
-                    <p>We operate with discipline, clarity, and measurable accountability.</p>
-                </div>
-
-                <div class="platform-card">
-                    <h3>Long-Term Orientation</h3>
-                    <p>We prioritize systems that compound over time.</p>
-                </div>
-
-                <div class="platform-card">
-                    <h3>Execution Focus</h3>
-                    <p>Ideas matter only when implemented effectively.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== APPLICATION CTA ===================== -->
-    <section id="apply">
-        <div class="final-cta">
-            <h2>Help design the infrastructure of prosperity.</h2>
-            <a href="#" class="btn btn-primary btn-large">Submit Your Application</a>
-        </div>
-    </section>
-
-    <!-- =====================[FOOTER SECTION]===================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="wordmark">
-                        <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
+                <div class="culture-points">
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Mission-First Environment</h4>
+                            <p>Every role connects directly to measurable economic impact</p>
+                        </div>
                     </div>
-                    <p>Infrastructure for prosperity</p>
-                </div>
-                <div>
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="overview.html">Platform Overview</a></li>
-                        <li><a href="modules.html">Core Modules</a></li>
-                        <li><a href="deployment.html">Deployment Models</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="governments.html">Governments</a></li>
-                        <li><a href="banks.html">Banks & Funds</a></li>
-                        <li><a href="enterprise.html">Enterprise</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Global Collaboration</h4>
+                            <p>Work across time zones with colleagues in 12 countries</p>
+                        </div>
+                    </div>
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Continuous Learning</h4>
+                            <p>Access to top-tier training, conferences, and professional development</p>
+                        </div>
+                    </div>
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Institutional Ownership</h4>
+                            <p>Take ownership of work that becomes lasting infrastructure</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
-                <div>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="security.html">Security</a>
-                    <a href="contact.html">Contact</a>
+
+            <div class="life-stats">
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">87%</div>
+                        <div class="stat-label">Employee Retention</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-</body>
-<script src="./scripts/main.js"></script>
-</html>
+<!-- =====================[OPEN POSITIONS]===================== -->
+<section class="positions-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Open Positions</span>
+            <h2>Join Our Team</h2>
+            <p>Explore opportunities to build prosperity infrastructure at scale</p>
+        </div>
+
+        <!-- Department Filter -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All Departments</button>
+            <button class="filter-tab" data-filter="technology">Technology</button>
+            <button class="filter-tab" data-filter="policy">Policy & Strategy</button>
+            <button class="filter-tab" data-filter="operations">Operations</button>
+            <button class="filter-tab" data-filter="finance">Finance & Investment</button>
+            <button class="filter-tab" data-filter="regional">Regional Leadership</button>
+        </div>
+
+        <!-- Positions Grid -->
+        <div class="positions-grid">
+            <!-- Technology Roles -->
+            <div class="position-card" data-department="technology">
+                <div class="position-header">
+                    <span class="position-badge technology">Technology</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> Remote / Global</span>
+                </div>
+                <h3>Senior Platform Architect</h3>
+                <p class="position-summary">Design and architect large-scale data systems for government and
+                    institutional clients.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 8+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="position-card" data-department="technology">
+                <div class="position-header">
+                    <span class="position-badge technology">Technology</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> New York / London</span>
+                </div>
+                <h3>Lead Full Stack Engineer</h3>
+                <p class="position-summary">Build the core platform that connects institutions, capital, and workforce
+                    data.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 5+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="position-card" data-department="technology">
+                <div class="position-header">
+                    <span class="position-badge technology">Technology</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                </div>
+                <h3>Data Engineer</h3>
+                <p class="position-summary">Build and maintain data pipelines for real-time economic intelligence.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 3+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Policy Roles -->
+            <div class="position-card" data-department="policy">
+                <div class="position-header">
+                    <span class="position-badge policy">Policy & Strategy</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> Washington DC</span>
+                </div>
+                <h3>Senior Policy Advisor</h3>
+                <p class="position-summary">Advise government partners on workforce policy and institutional design.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 10+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="position-card" data-department="policy">
+                <div class="position-header">
+                    <span class="position-badge policy">Policy & Strategy</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> London</span>
+                </div>
+                <h3>Labor Market Economist</h3>
+                <p class="position-summary">Analyze labor market data to inform system design and policy
+                    recommendations.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 5+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Operations Roles -->
+            <div class="position-card" data-department="operations">
+                <div class="position-header">
+                    <span class="position-badge operations">Operations</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> Nairobi</span>
+                </div>
+                <h3>Program Director, Africa</h3>
+                <p class="position-summary">Lead program implementation across African partner countries.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 8+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="position-card" data-department="operations">
+                <div class="position-header">
+                    <span class="position-badge operations">Operations</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                </div>
+                <h3>Implementation Manager</h3>
+                <p class="position-summary">Coordinate with government partners to deploy and scale systems.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 5+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Finance Roles -->
+            <div class="position-card" data-department="finance">
+                <div class="position-header">
+                    <span class="position-badge finance">Finance & Investment</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> New York</span>
+                </div>
+                <h3>Investment Analyst</h3>
+                <p class="position-summary">Analyze development finance opportunities and capital deployment models.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 3+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="position-card" data-department="finance">
+                <div class="position-header">
+                    <span class="position-badge finance">Finance & Investment</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> London</span>
+                </div>
+                <h3>Capital Markets Specialist</h3>
+                <p class="position-summary">Structure innovative financing mechanisms for development outcomes.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 7+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Regional Roles -->
+            <div class="position-card" data-department="regional">
+                <div class="position-header">
+                    <span class="position-badge regional">Regional Leadership</span>
+                    <span class="position-location"><i class="fas fa-map-marker-alt"></i> Bogotá</span>
+                </div>
+                <h3>Regional Director, Latin America</h3>
+                <p class="position-summary">Lead PSHub's expansion and operations across Latin America.</p>
+                <div class="position-details">
+                    <span><i class="fas fa-briefcase"></i> 10+ years experience</span>
+                    <span><i class="fas fa-clock"></i> Full-time</span>
+                </div>
+                <a href="#" class="position-link">View Role <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No positions match your filter</h3>
+            <p>Try another department or check back soon for new opportunities</p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[BENEFITS SECTION]===================== -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Benefits & Perks</span>
+            <h2>Supporting You</h2>
+            <p>We invest in our team so they can invest in building prosperity</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-heart"></i>
+                <h4>Comprehensive Healthcare</h4>
+                <p>Medical, dental, and vision coverage for you and your family</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-chart-pie"></i>
+                <h4>Retirement Planning</h4>
+                <p>401(k) matching and pension options for long-term security</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-plane"></i>
+                <h4>Global Flexibility</h4>
+                <p>Remote-first culture with hubs in major global cities</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Learning & Development</h4>
+                <p>$5,000 annual budget for professional development</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-clock"></i>
+                <h4>Flexible Time Off</h4>
+                <p>Unlimited PTO and 12 weeks fully-paid parental leave</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-globe"></i>
+                <h4>Global Mobility</h4>
+                <p>Opportunities to work across our international offices</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[HIRING PROCESS]===================== -->
+<section class="process-section">
+    <div class="container">
+        <div class="process-grid">
+            <div class="process-content">
+                <span class="section-badge">Our Hiring Process</span>
+                <h2>How We Hire</h2>
+                <p>We're deliberate about finding the right people to build prosperity infrastructure. Here's what to
+                    expect.</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Application Review</h4>
+                            <p>Our team reviews your resume and cover letter within 5-7 business days.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>Initial Conversation</h4>
+                            <p>A 30-minute video call with a recruiter to discuss your experience and interest.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Skills Assessment</h4>
+                            <p>Role-specific exercise to demonstrate your capabilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Team Interviews</h4>
+                            <p>Conversations with future colleagues across 2-3 sessions.</p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h4>Final Decision</h4>
+                            <p>We aim to make a decision within one week of final interviews.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-cta">
+                <div class="cta-card">
+                    <h3>Ready to apply?</h3>
+                    <p>Review our open positions and submit your application. We look forward to hearing from you.</p>
+                    <div class="cta-links">
+                        <a href="#open-positions" class="btn-primary">View Open Roles</a>
+                        <a href="/contact" class="btn-secondary">Questions? Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[DIVERSITY STATEMENT]===================== -->
+<section class="diversity-section">
+    <div class="container">
+        <div class="diversity-box">
+            <i class="fas fa-equals"></i>
+            <h2>Equal Opportunity Builder</h2>
+            <p>PSHub is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive
+                environment for all employees. We do not discriminate on the basis of race, religion, color, national
+                origin, gender, sexual orientation, age, marital status, veteran status, or disability status.</p>
+            <p class="diversity-footer">We encourage applications from individuals of all backgrounds and experiences.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const positionCards = document.querySelectorAll('.position-card');
+        const noResults = document.querySelector('.no-results');
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Update active tab
+                filterTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                let visibleCount = 0;
+
+                // Filter cards
+                positionCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.department === filter) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.value-card, .benefit-card, .position-card, .process-step').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,593 @@
+{% extends "base.html" %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/overview.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<!-- 
+██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
+██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
+██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
+██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
+-->
+<!-- =====================[OVERVIEW HERO]===================== -->
+<section class="overview-hero">
+    <div class="container">
+        <div class="overview-hero-content">
+            <span class="hero-badge">Platform Overview</span>
+            <h1>The Operating System for Prosperity Infrastructure</h1>
+            <p>An integrated platform that enables governments, institutions, and markets to design, operate, and
+                measure systems that convert population potential into economic outcomes.</p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PLATFORM INTRODUCTION]===================== -->
+<section class="intro-section">
+    <div class="container">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <span class="section-badge">What is PSHub?</span>
+                <h2>Beyond Fragmentation</h2>
+                <p class="lead-text">Prosperity System Hub is not a program, a consultancy, or a piece of software
+                    alone. It is an integrated infrastructure layer that sits between institutions, capital, and people
+                    — making them work as one system.</p>
+
+                <div class="intro-stats">
+                    <div class="intro-stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="intro-stat">
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">Institutional Partners</div>
+                    </div>
+                    <div class="intro-stat">
+                        <div class="stat-number">3.2M</div>
+                        <div class="stat-label">Lives Impacted</div>
+                    </div>
+                    <div class="intro-stat">
+                        <div class="stat-number">$2.5B</div>
+                        <div class="stat-label">Capital Deployed</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-visual">
+                <div class="platform-diagram">
+                    <div class="diagram-layer layer-1">
+                        <i class="fas fa-users"></i>
+                        <span>Population Potential</span>
+                    </div>
+                    <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="diagram-layer layer-2">
+                        <i class="fas fa-sitemap"></i>
+                        <span>PSHub Infrastructure</span>
+                    </div>
+                    <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="diagram-layer layer-3">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Economic Outcomes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CORE ARCHITECTURE]===================== -->
+<section class="architecture-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Core Architecture</span>
+            <h2>Three Integrated Layers</h2>
+            <p>PSHub is built on a modular architecture that connects every element of prosperity systems</p>
+        </div>
+
+        <div class="architecture-grid">
+            <div class="architecture-card">
+                <div class="card-header">
+                    <div class="layer-icon opportunity">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Opportunity Layer</h3>
+                </div>
+                <p class="layer-description">Maps citizens, skills, programs, employers, and financing into a single
+                    opportunity pipeline architecture.</p>
+                <ul class="layer-features">
+                    <li><i class="fas fa-check"></i> Talent pipeline mapping</li>
+                    <li><i class="fas fa-check"></i> Program inventory & alignment</li>
+                    <li><i class="fas fa-check"></i> Employer demand integration</li>
+                    <li><i class="fas fa-check"></i> Financial aid pathways</li>
+                </ul>
+            </div>
+
+            <div class="architecture-card featured">
+                <div class="card-header">
+                    <div class="layer-icon coordination">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Coordination Layer</h3>
+                </div>
+                <p class="layer-description">Aligns ministries, institutions, financial actors, and delivery partners
+                    inside one interoperable framework.</p>
+                <ul class="layer-features">
+                    <li><i class="fas fa-check"></i> Cross-institutional governance</li>
+                    <li><i class="fas fa-check"></i> Data sharing protocols</li>
+                    <li><i class="fas fa-check"></i> Partner orchestration</li>
+                    <li><i class="fas fa-check"></i> Service delivery integration</li>
+                </ul>
+                <div class="featured-badge">Core</div>
+            </div>
+
+            <div class="architecture-card">
+                <div class="card-header">
+                    <div class="layer-icon intelligence">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Intelligence Layer</h3>
+                </div>
+                <p class="layer-description">Provides real-time visibility into talent flows, employment outcomes,
+                    capital efficiency, and systemic performance.</p>
+                <ul class="layer-features">
+                    <li><i class="fas fa-check"></i> Real-time dashboards</li>
+                    <li><i class="fas fa-check"></i> Predictive analytics</li>
+                    <li><i class="fas fa-check"></i> Capital efficiency tracking</li>
+                    <li><i class="fas fa-check"></i> Outcome verification</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[KEY CAPABILITIES]===================== -->
+<section class="capabilities-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Key Capabilities</span>
+            <h2>What the Platform Does</h2>
+            <p>End-to-end infrastructure for prosperity system design and operation</p>
+        </div>
+
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-draw-polygon"></i>
+                </div>
+                <h3>System Design</h3>
+                <p>Architect opportunity pipelines across education, employment, finance, and institutions with built-in
+                    feedback loops.</p>
+            </div>
+
+            <div class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>Institutional Integration</h3>
+                <p>Connect previously siloed ministries, agencies, and programs into a single operating framework.</p>
+            </div>
+
+            <div class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Performance Intelligence</h3>
+                <p>Real-time visibility into talent flows, program effectiveness, and economic outcomes.</p>
+            </div>
+
+            <div class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Partner Orchestration</h3>
+                <p>Coordinate employers, training providers, and delivery partners under unified protocols.</p>
+            </div>
+
+            <div class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3>Capital Allocation</h3>
+                <p>Deploy public and private capital through performance-verified pathways with tracked returns.</p>
+            </div>
+
+            <div class="capability-card">
+                <div class="capability-icon">
+                    <i class="fas fa-rotate"></i>
+                </div>
+                <h3>Continuous Optimization</h3>
+                <p>Machine learning-driven recommendations for program adjustment and resource allocation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PLATFORM BENEFITS]===================== -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-number">01</div>
+                <div class="benefit-content">
+                    <h3>For Governments</h3>
+                    <p>Unify ministries, track workforce flows, and align policy execution with measurable outcomes.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-number">02</div>
+                <div class="benefit-content">
+                    <h3>For Development Banks</h3>
+                    <p>Trace capital to economic outputs, optimize deployment, and compound development impact.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-number">03</div>
+                <div class="benefit-content">
+                    <h3>For Employers</h3>
+                    <p>Structured talent pipelines aligned to industrial demand with verified skill matching.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-number">04</div>
+                <div class="benefit-content">
+                    <h3>For Regions & Cities</h3>
+                    <p>Localized economic coordination platforms for targeted growth and labor market efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[TECHNICAL ARCHITECTURE]===================== -->
+<section class="technical-section">
+    <div class="container">
+        <div class="technical-header">
+            <span class="section-badge">Technical Architecture</span>
+            <h2>Built for Scale and Security</h2>
+            <p>Enterprise-grade infrastructure designed for government and institutional requirements</p>
+        </div>
+
+        <div class="technical-grid">
+            <div class="technical-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Security & Compliance</h4>
+                <ul>
+                    <li>SOC 2 Type II certified</li>
+                    <li>GDPR compliant</li>
+                    <li>Government-grade encryption</li>
+                    <li>Role-based access control</li>
+                </ul>
+            </div>
+
+            <div class="technical-card">
+                <i class="fas fa-cloud"></i>
+                <h4>Deployment Flexibility</h4>
+                <ul>
+                    <li>Private cloud</li>
+                    <li>Government cloud</li>
+                    <li>On-premise</li>
+                    <li>Hybrid configurations</li>
+                </ul>
+            </div>
+
+            <div class="technical-card">
+                <i class="fas fa-database"></i>
+                <h4>Data Integration</h4>
+                <ul>
+                    <li>RESTful APIs</li>
+                    <li>Real-time sync</li>
+                    <li>Legacy system connectors</li>
+                    <li>Bulk data processing</li>
+                </ul>
+            </div>
+
+            <div class="technical-card">
+                <i class="fas fa-chart-simple"></i>
+                <h4>Analytics Engine</h4>
+                <ul>
+                    <li>Real-time dashboards</li>
+                    <li>Predictive modeling</li>
+                    <li>Custom report builder</li>
+                    <li>Data visualization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[DEPLOYMENT MODELS]===================== -->
+<section class="deployment-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Deployment Models</span>
+            <h2>Configured for Your Context</h2>
+            <p>Multiple deployment options to match institutional requirements</p>
+        </div>
+
+        <div class="deployment-grid">
+            <div class="deployment-card">
+                <div class="deployment-icon">
+                    <i class="fas fa-flag"></i>
+                </div>
+                <h3>National Deployment</h3>
+                <p>Full-stack integration across ministries and public institutions for country-wide prosperity systems.
+                </p>
+                <div class="deployment-tags">
+                    <span>Whole-of-government</span>
+                    <span>Cross-ministry</span>
+                    <span>National scale</span>
+                </div>
+            </div>
+
+            <div class="deployment-card">
+                <div class="deployment-icon">
+                    <i class="fas fa-city"></i>
+                </div>
+                <h3>Regional / City Model</h3>
+                <p>Localized economic operating system for regional growth and metropolitan coordination.</p>
+                <div class="deployment-tags">
+                    <span>Regional</span>
+                    <span>Metropolitan</span>
+                    <span>Localized</span>
+                </div>
+            </div>
+
+            <div class="deployment-card">
+                <div class="deployment-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3>Sector Deployment</h3>
+                <p>Focused implementation for priority industries and labor market segments.</p>
+                <div class="deployment-tags">
+                    <span>Industry-specific</span>
+                    <span>Targeted</span>
+                    <span>Priority sectors</span>
+                </div>
+            </div>
+
+            <div class="deployment-card">
+                <div class="deployment-icon">
+                    <i class="fas fa-building-columns"></i>
+                </div>
+                <h3>Institutional Layer</h3>
+                <p>Standalone deployment for banks, funds, and workforce authorities.</p>
+                <div class="deployment-tags">
+                    <span>Single institution</span>
+                    <span>Specialized</span>
+                    <span>Modular</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[INTEGRATION ECOSYSTEM]===================== -->
+<section class="integration-section">
+    <div class="container">
+        <div class="integration-grid">
+            <div class="integration-content">
+                <span class="section-badge">Ecosystem</span>
+                <h2>Integrates With Your Existing Systems</h2>
+                <p>PSHub connects with the tools and platforms you already use, preserving existing investments while
+                    adding new capabilities.</p>
+
+                <div class="integration-list">
+                    <div class="integration-item">
+                        <i class="fas fa-database"></i>
+                        <span>HRIS & Workforce Systems</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fas fa-university"></i>
+                        <span>Financial Management Systems</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education & Training Platforms</span>
+                    </div>
+                    <div class="integration-item">
+                        <i class="fas fa-file-signature"></i>
+                        <span>Case Management Systems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="integration-visual">
+                <div class="integration-circle">
+                    <div class="circle-center">PSHub</div>
+                    <div class="circle-item item-1">HRIS</div>
+                    <div class="circle-item item-2">ERP</div>
+                    <div class="circle-item item-3">LMS</div>
+                    <div class="circle-item item-4">CRM</div>
+                    <div class="circle-item item-5">BI</div>
+                    <div class="circle-item item-6">API</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[SECURITY & COMPLIANCE]===================== -->
+<section class="security-section">
+    <div class="container">
+        <div class="security-banner">
+            <div class="security-badge">
+                <i class="fas fa-shield"></i>
+                <span>Enterprise Security</span>
+            </div>
+            <h3>SOC 2 Type II Certified • GDPR Compliant • Government-Ready</h3>
+            <p>Our platform meets the highest standards of security, privacy, and compliance required by governments and
+                financial institutions.</p>
+            <a href="{{ url_for('main.security') }}" class="security-link">View Security Overview <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CASE STUDIES PREVIEW]===================== -->
+<section class="cases-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">In Action</span>
+            <h2>Trusted by Leading Institutions</h2>
+            <p>See how PSHub is deployed across the globe</p>
+        </div>
+
+        <div class="cases-grid">
+            <div class="case-card">
+                <div class="case-flag"><i class="fas fa-flag-usa"></i></div>
+                <h3>US Economic Development Administration</h3>
+                <p>Workforce system integration across 12 states, connecting 200+ programs to employer demand.</p>
+                <div class="case-meta">
+                    <span><i class="fas fa-building"></i> Government</span>
+                    <span><i class="fas fa-users"></i> 1.2M workers</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-flag"><i class="fas fa-flag"></i></div>
+                <h3>African Development Bank</h3>
+                <p>Capital deployment framework for youth employment initiatives across 8 countries.</p>
+                <div class="case-meta">
+                    <span><i class="fas fa-building"></i> Development Bank</span>
+                    <span><i class="fas fa-coins"></i> $450M deployed</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-flag"><i class="fas fa-flag-uk"></i></div>
+                <h3>UK Cabinet Office</h3>
+                <p>Cross-departmental prosperity system connecting 14 agencies and 200+ programs.</p>
+                <div class="case-meta">
+                    <span><i class="fas fa-building"></i> Government</span>
+                    <span><i class="fas fa-chart-line"></i> 23% efficiency gain</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cases-cta">
+            <a href="/case-studies" class="btn-outline">View All Case Studies <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[FAQ SECTION]===================== -->
+<section class="faq-section">
+    <div class="container">
+        <div class="faq-grid">
+            <div class="faq-header">
+                <span class="section-badge">FAQ</span>
+                <h2>Common Questions</h2>
+                <p>About the platform and deployment</p>
+            </div>
+
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How long does deployment typically take?</h4>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Initial deployment typically takes 3-6 months, depending on scope and institutional
+                            readiness. Phased rollouts are available.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can PSHub integrate with our existing systems?</h4>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our platform includes APIs and connectors for major HRIS, financial, and case management
+                            systems. Custom integrations are supported.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What training and support do you provide?</h4>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide comprehensive training for administrators and users, plus ongoing technical
+                            support and system optimization services.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Is the platform available on-premise?</h4>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, PSHub can be deployed on-premise, in government clouds, or in private cloud environments
+                            based on your requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CTA SECTION]===================== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Ready to build prosperity infrastructure?</h2>
+            <p>Schedule a strategic briefing to explore how PSHub can work for your institution</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('main.briefing') }}" class="btn-primary">Request a Briefing</a>
+                <a href="{{ url_for('main.contact') }}" class="btn-secondary">Contact Our Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe elements for animation
+        document.querySelectorAll('.architecture-card, .capability-card, .deployment-card, .technical-card, .case-card').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

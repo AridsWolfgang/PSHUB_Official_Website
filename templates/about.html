@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>About Us | Prosperity System Hub</title>
-</head>
+{% block styles %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+{% endblock %}
+
+{% block content %}
 <!-- 
 ██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
 ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
@@ -19,91 +16,607 @@
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
 -->
 
-<!-- ===================== HERO ===================== -->
-<section class="hero animated-bg">
-    <div class="hero-compound">
-        <div class="hero-content">
-            <h1 class="hero-title">About Prosperity System Hub</h1>
-            <p class="hero-description">
-                We design and operate systems that convert population potential into measurable economic outcomes.
-            </p>
-            <a href="#mission" class="btn hero-btn">Our Mission & Vision</a>
+<!-- =====================[ABOUT HERO]===================== -->
+<section class="about-hero">
+    <div class="container">
+        <div class="about-hero-content">
+            <span class="hero-badge">About Us</span>
+            <h1>Building Prosperity Infrastructure at Institutional Scale</h1>
+            <p>We are a mission-driven organization dedicated to designing and operating systems that convert population
+                potential into measurable economic outcomes.</p>
         </div>
     </div>
 </section>
 
-<!-- ===================== MISSION & VISION ===================== -->
-<section id="mission">
+<!-- =====================[OUR STORY]===================== -->
+<section class="story-section">
     <div class="container">
-        <h2 class="text-center">Mission & Vision</h2>
-        <div class="platform-grid">
+        <div class="story-grid">
+            <div class="story-content">
+                <span class="section-badge">Our Story</span>
+                <h2>From Insight to Infrastructure</h2>
+                <p class="lead-text">PSHub was founded on a simple observation: prosperity initiatives fail not from
+                    lack of effort, but from lack of systemic coordination.</p>
 
-            <div class="platform-card">
-                <h3>Our Mission</h3>
-                <p>
-                    To create integrated, data-driven prosperity systems that empower governments, institutions, and
-                    markets to unlock human and economic potential efficiently.
+                <div class="story-text">
+                    <p>In 2018, our founding team—drawn from government, development finance, and technology—began
+                        studying economic development programs across 15 countries. We found the same pattern
+                        everywhere: disconnected initiatives, fragmented data, capital deployed without feedback loops,
+                        and outcomes that failed to compound.</p>
+                    <p>The solution was not another program. It was infrastructure. An operating system that could sit
+                        between institutions, capital, and people—making them work as one coherent system.</p>
+                    <p>Today, PSHub operates across four continents, partnering with governments, development banks, and
+                        major employers to build prosperity infrastructure that lasts.</p>
+                </div>
+
+                <div class="story-metrics">
+                    <div class="metric">
+                        <div class="metric-number">2018</div>
+                        <div class="metric-label">Founded</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">15+</div>
+                        <div class="metric-label">Countries</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-number">47</div>
+                        <div class="metric-label">Partners</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-visual">
+                <div class="timeline-card">
+                    <h3>Our Journey</h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2018</div>
+                            <div class="timeline-desc">Founded in New York</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2019</div>
+                            <div class="timeline-desc">First government partnership</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-desc">Expanded to Europe</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2021</div>
+                            <div class="timeline-desc">Africa regional office opened</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <div class="timeline-desc">Asia-Pacific expansion</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-desc">47 institutional partners</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-desc">Middle East office launch</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[MISSION & VISION]===================== -->
+<section class="mission-vision-section">
+    <div class="container">
+        <div class="mission-vision-grid">
+            <div class="mission-card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2>Our Mission</h2>
+                <p>Design and operate integrated prosperity infrastructure that converts population potential into
+                    measurable economic outcomes at institutional scale.</p>
+                <div class="card-footer">
+                    <span>What drives us daily</span>
+                </div>
+            </div>
+
+            <div class="vision-card">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2>Our Vision</h2>
+                <p>A world where every individual has a structured path to economic opportunity, and every institution
+                    operates as part of a coherent prosperity system.</p>
+                <div class="card-footer">
+                    <span>The future we're building</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[OUR VALUES]===================== -->
+<section class="values-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Our Values</span>
+            <h2>Principles That Guide Us</h2>
+            <p>These beliefs shape every decision, partnership, and deployment</p>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-scale-balanced"></i>
+                </div>
+                <h3>System Integrity</h3>
+                <p>We build systems that are coherent, transparent, and self-correcting—not one-off interventions.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-chart-simple"></i>
+                </div>
+                <h3>Measurable Impact</h3>
+                <p>If it cannot be measured and verified, it does not count. We hold ourselves to empirical outcomes.
                 </p>
             </div>
 
-            <div class="platform-card">
-                <h3>Our Vision</h3>
-                <p>
-                    To be the leading force in transforming prosperity infrastructure globally, enabling stakeholders to
-                    thrive through intelligent, aligned systems.
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Institutional Partnership</h3>
+                <p>We work with governments and institutions, not around them. Lasting scale requires institutional
+                    ownership.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-arrow-trend-up"></i>
+                </div>
+                <h3>Compounding Logic</h3>
+                <p>Every intervention should strengthen the system for the next cycle. We design for increasing returns.
                 </p>
             </div>
 
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Human Potential</h3>
+                <p>At the center of every system is human capability. Infrastructure exists to unlock it.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Long-Term Commitment</h3>
+                <p>Prosperity is not built in quarters. We commit to multi-decade institutional partnerships.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===================== OUR TEAM ===================== -->
-<section id="team">
+<!-- =====================[OUR APPROACH]===================== -->
+<section class="approach-section">
     <div class="container">
-        <h2 class="text-center">Leadership Team</h2>
-        <div class="platform-grid">
-            <div class="platform-card">
-                <h3>CEO & Founder</h3>
-                <p>Leading the strategy, vision, and execution of PSHub’s infrastructure solutions.</p>
+        <div class="approach-grid">
+            <div class="approach-content">
+                <span class="section-badge">Our Approach</span>
+                <h2>How We Work</h2>
+                <p class="lead-text">We don't build projects. We build systems that institutions operate for decades.
+                </p>
+
+                <div class="approach-steps">
+                    <div class="approach-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h4>Diagnose</h4>
+                            <p>Map institutional fragmentation, program gaps, and capital flows to identify leverage
+                                points.</p>
+                        </div>
+                    </div>
+
+                    <div class="approach-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h4>Design</h4>
+                            <p>Architect integrated opportunity pipelines aligned with demand, mandates, and funding.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="approach-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h4>Deploy</h4>
+                            <p>Implement platform infrastructure and coordinate stakeholders under unified governance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="approach-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h4>Optimize</h4>
+                            <p>Continuous performance feedback loops to compound outcomes over time.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="platform-card">
-                <h3>CTO</h3>
-                <p>Driving the technology roadmap and innovation across our platform intelligence systems.</p>
-            </div>
-            <div class="platform-card">
-                <h3>Head of Strategy</h3>
-                <p>Aligning stakeholders and programs for measurable economic outcomes.</p>
+
+            <div class="approach-visual">
+                <div class="approach-quote">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote>
+                        "Infrastructure is not the goal. It's what makes the goal achievable at scale. We build the
+                        systems that enable prosperity to compound."
+                    </blockquote>
+                    <div class="quote-author">
+                        <strong>Michael Chen</strong>
+                        <span>CEO & Co-Founder</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===================== IMPACT ===================== -->
-<section id="impact">
+<!-- =====================[GLOBAL PRESENCE]===================== -->
+<section class="global-section">
     <div class="container">
-        <h2 class="text-center">Our Impact</h2>
-        <div class="proof-list">
-            <div class="proof-item">Aligned institutional programs</div>
-            <div class="proof-item">Optimized talent and workforce flows</div>
-            <div class="proof-item">Data-driven decision making</div>
-            <div class="proof-item">Economic outcomes that compound over time</div>
+        <div class="section-header">
+            <span class="section-badge">Global Presence</span>
+            <h2>Operating Worldwide</h2>
+            <p>Regional hubs delivering local expertise with global reach</p>
+        </div>
+
+        <div class="global-grid">
+            <div class="region-card">
+                <div class="region-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <h3>Americas</h3>
+                <p class="region-location">New York (HQ) • Washington DC • Bogotá • São Paulo</p>
+                <div class="region-stats">
+                    <span><i class="fas fa-building"></i> 12 partners</span>
+                    <span><i class="fas fa-users"></i> 45+ team</span>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-icon">
+                    <i class="fas fa-globe-europe"></i>
+                </div>
+                <h3>Europe & Africa</h3>
+                <p class="region-location">London • Nairobi • Brussels • Lagos</p>
+                <div class="region-stats">
+                    <span><i class="fas fa-building"></i> 18 partners</span>
+                    <span><i class="fas fa-users"></i> 60+ team</span>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-icon">
+                    <i class="fas fa-globe-asia"></i>
+                </div>
+                <h3>Asia-Pacific</h3>
+                <p class="region-location">Singapore • Sydney • Tokyo • New Delhi</p>
+                <div class="region-stats">
+                    <span><i class="fas fa-building"></i> 14 partners</span>
+                    <span><i class="fas fa-users"></i> 35+ team</span>
+                </div>
+            </div>
+
+            <div class="region-card">
+                <div class="region-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Middle East</h3>
+                <p class="region-location">Dubai • Riyadh • Abu Dhabi</p>
+                <div class="region-stats">
+                    <span><i class="fas fa-building"></i> 8 partners</span>
+                    <span><i class="fas fa-users"></i> 20+ team</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="global-map">
+            <div class="map-pins">
+                <span class="pin" style="top: 30%; left: 20%;">NYC</span>
+                <span class="pin" style="top: 35%; left: 45%;">LON</span>
+                <span class="pin" style="top: 60%; left: 30%;">BOG</span>
+                <span class="pin" style="top: 70%; left: 55%;">NBO</span>
+                <span class="pin" style="top: 45%; left: 75%;">SIN</span>
+                <span class="pin" style="top: 25%; left: 85%;">SYD</span>
+                <span class="pin" style="top: 55%; left: 65%;">DXB</span>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ===================== FINAL CTA ===================== -->
-<section id="demo">
-    <div class="final-cta">
-        <h2>Join us in building aligned prosperity systems.</h2>
-        <a href="briefing.html" class="btn btn-primary btn-large">Book a Strategic Briefing</a>
+<!-- =====================[IMPACT METRICS]===================== -->
+<section class="impact-section">
+    <div class="container">
+        <div class="impact-header">
+            <span class="section-badge">Our Impact</span>
+            <h2>By the Numbers</h2>
+        </div>
+
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="impact-number">15+</div>
+                <div class="impact-label">Countries</div>
+                <div class="impact-desc">Active operations across four continents</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">47</div>
+                <div class="impact-label">Institutional Partners</div>
+                <div class="impact-desc">Governments, banks, and enterprise organizations</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">3.2M</div>
+                <div class="impact-label">Lives Impacted</div>
+                <div class="impact-desc">Individuals connected to opportunity pipelines</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">$2.5B</div>
+                <div class="impact-label">Capital Deployed</div>
+                <div class="impact-desc">Through performance-verified pathways</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">150+</div>
+                <div class="impact-label">Team Members</div>
+                <div class="impact-desc">Across 12 countries and 25+ languages</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">87%</div>
+                <div class="impact-label">Retention Rate</div>
+                <div class="impact-desc">Employee satisfaction and long-term commitment</div>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- =====================[LEADERSHIP PREVIEW]===================== -->
+<section class="leadership-preview-section">
+    <div class="container">
+        <div class="leadership-header">
+            <div>
+                <span class="section-badge">Leadership</span>
+                <h2>Experienced Leadership</h2>
+                <p>Decades of experience across government, finance, and technology</p>
+            </div>
+            <a href="/team" class="btn-outline">Meet the Full Team <i class="fas fa-arrow-right"></i></a>
+        </div>
 
+        <div class="leadership-grid">
+            <div class="leader-card">
+                <div class="leader-image"></div>
+                <h3>Michael Chen</h3>
+                <p class="leader-title">Chief Executive Officer</p>
+                <p class="leader-bio">Former Undersecretary of Economic Policy, 20+ years in public sector
+                    transformation.</p>
+            </div>
 
-<script src="./scripts/main.js"></script>
+            <div class="leader-card">
+                <div class="leader-image"></div>
+                <h3>Sarah Okonkwo</h3>
+                <p class="leader-title">Chief Operating Officer</p>
+                <p class="leader-bio">Former Director at World Bank, led multi-country infrastructure programs.</p>
+            </div>
 
-</body>
+            <div class="leader-card">
+                <div class="leader-image"></div>
+                <h3>James Rodriguez</h3>
+                <p class="leader-title">Chief Technology Officer</p>
+                <p class="leader-bio">Former VP of Engineering at Palantir, architect of large-scale government systems.
+                </p>
+            </div>
 
-</html>
+            <div class="leader-card">
+                <div class="leader-image"></div>
+                <h3>Elena Volkov</h3>
+                <p class="leader-title">Chief Financial Officer</p>
+                <p class="leader-bio">Former Managing Director at European Investment Bank, structured $5B+ in
+                    development finance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PARTNERS & CLIENTS]===================== -->
+<section class="partners-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Our Partners</span>
+            <h2>Trusted by Leading Institutions</h2>
+        </div>
+
+        <div class="partners-grid">
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>US Treasury</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>UK Cabinet Office</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>World Bank</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>African Dev Bank</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>European Commission</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>IMF</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>Inter-American Dev Bank</span>
+            </div>
+            <div class="partner-item">
+                <i class="fas fa-building"></i>
+                <span>Asian Dev Bank</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CULTURE SECTION]===================== -->
+<section class="culture-section">
+    <div class="container">
+        <div class="culture-grid">
+            <div class="culture-content">
+                <span class="section-badge">Our Culture</span>
+                <h2>Mission-Driven, Globally Connected</h2>
+                <p class="lead-text">We're united by a shared purpose: building infrastructure that transforms economies
+                    and unlocks human potential.</p>
+
+                <div class="culture-points">
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Purpose-First</h4>
+                            <p>Every role connects directly to measurable impact</p>
+                        </div>
+                    </div>
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Global Collaboration</h4>
+                            <p>Teams across 12 countries and 25+ languages</p>
+                        </div>
+                    </div>
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Continuous Learning</h4>
+                            <p>$5,000 annual L&D budget per employee</p>
+                        </div>
+                    </div>
+                    <div class="culture-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Institutional Ownership</h4>
+                            <p>Take ownership of work that becomes lasting infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="culture-stats">
+                <div class="stats-card">
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">87%</div>
+                        <div class="stat-label">Retention</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[TIMELINE SECTION]===================== -->
+<section class="timeline-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Our History</span>
+            <h2>Building Since 2018</h2>
+        </div>
+
+        <div class="timeline-horizontal">
+            <div class="timeline-track">
+                <div class="timeline-marker">
+                    <div class="marker-year">2018</div>
+                    <div class="marker-event">Founded in NYC</div>
+                </div>
+                <div class="timeline-marker">
+                    <div class="marker-year">2019</div>
+                    <div class="marker-event">First gov partner</div>
+                </div>
+                <div class="timeline-marker">
+                    <div class="marker-year">2020</div>
+                    <div class="marker-event">Europe expansion</div>
+                </div>
+                <div class="timeline-marker">
+                    <div class="marker-year">2021</div>
+                    <div class="marker-event">Africa office</div>
+                </div>
+                <div class="timeline-marker">
+                    <div class="marker-year">2022</div>
+                    <div class="marker-event">Asia-Pacific</div>
+                </div>
+                <div class="timeline-marker">
+                    <div class="marker-year">2023</div>
+                    <div class="marker-event">47 partners</div>
+                </div>
+                <div class="timeline-marker">
+                    <div class="marker-year">2024</div>
+                    <div class="marker-event">Middle East</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[JOIN US CTA]===================== -->
+<section class="join-cta-section">
+    <div class="container">
+        <div class="join-cta-box">
+            <h2>Join us in building prosperity infrastructure</h2>
+            <p>Explore careers, partnerships, or schedule a strategic briefing</p>
+            <div class="join-cta-buttons">
+                <a href="/careers" class="btn-primary">View Careers</a>
+                <a href="/briefing" class="btn-outline-light">Request Briefing</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe elements for animation
+        document.querySelectorAll('.value-card, .region-card, .impact-card, .leader-card, .partner-item, .culture-point, .timeline-marker').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

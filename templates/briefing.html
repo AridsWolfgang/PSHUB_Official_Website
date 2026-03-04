@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Strategic Briefing | Prosperity System Hub</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-</head>
+{% block styles %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/briefing.css') }}">
+
+{% endblock %}
+
+{% block content %}
 <!-- 
 ██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
 ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
@@ -18,172 +15,610 @@
 ██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
 -->
-
-<body>
-    <!-- =====================[NAVIGATION SECTION]===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
-            </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
-                <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
-                <li class="nav-item"><a href="how.html" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="intelligence.html" class="nav-link">Intelligence</a></li>
-            </ul>
+<!-- =====================[BRIEFING HERO]===================== -->
+<section class="briefing-hero">
+    <div class="container">
+        <div class="briefing-hero-content">
+            <span class="hero-badge">Strategic Briefing</span>
+            <h1>Prosperity Infrastructure at Scale</h1>
+            <p>A structured conversation for governments, institutions, and market leaders</p>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- =====================[HERO / CTA SECTION]===================== -->
-    <section class="hero animated-bg" id="briefing-hero">
-        <div class="hero-compound">
-            <div class="hero-content">
-                <h1 class="hero-title">Book Your Strategic Briefing</h1>
-                <p class="hero-description">Discover how Prosperity System Hub can transform your workforce, institutions, and markets through integrated systems and actionable insights.</p>
-                <a href="#booking-form" class="btn hero-btn">Book Now</a>
-            </div>
-        </div>
-    </section>
+<!-- =====================[BRIEFING OVERVIEW]===================== -->
+<section class="overview-section">
+    <div class="container">
+        <div class="overview-grid">
+            <div class="overview-content">
+                <span class="section-badge">Overview</span>
+                <h2>What is a Strategic Briefing?</h2>
+                <p class="lead-text">A 90-minute structured conversation with our senior team to explore how PSHub's
+                    infrastructure platform can address your specific institutional challenges.</p>
 
-    <!-- =====================[INFORMATION SECTION]===================== -->
-    <section id="why-briefing">
-        <div class="container">
-            <h2>Why Schedule a Briefing?</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <i class="fa-solid fa-users"></i>
-                    <h3>Tailored Solutions</h3>
-                    <p>Understand how our platform can solve your organization’s unique challenges.</p>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Actionable Insights</h3>
-                    <p>Get a clear roadmap of measurable economic outcomes and workforce improvements.</p>
-                </div>
-                <div class="info-card">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h3>Expert Guidance</h3>
-                    <p>Work directly with our team to align systems, institutions, and partners effectively.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================[BOOKING FORM SECTION]===================== -->
-    <section id="booking-form">
-        <div class="container form-container">
-            <h2>Reserve Your Spot</h2>
-            <p>Please fill out the form below, and a member of our team will contact you to schedule your briefing.</p>
-
-            <form action="https://formsubmit.io/send/youremail@example.com" method="POST" class="cta-form">
-                <!-- Name -->
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-
-                <!-- Organization -->
-                <label for="organization">Organization</label>
-                <input type="text" id="organization" name="organization" placeholder="Your Organization" required>
-
-                <!-- Email -->
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <!-- Phone -->
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-
-                <!-- Type of Briefing -->
-                <label for="type">Type of Briefing</label>
-                <select id="type" name="type" required>
-                    <option value="">Select One</option>
-                    <option value="Government">Government / Public Authority</option>
-                    <option value="Bank">Development Bank / Fund</option>
-                    <option value="Enterprise">Large Employer / Enterprise</option>
-                    <option value="City Operator">Regional / City Operator</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <!-- Additional Notes -->
-                <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes" rows="4" placeholder="Anything else you'd like us to know..."></textarea>
-
-                <!-- Submit -->
-                <button type="submit" class="btn btn-primary btn-large">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- =====================[CONTACT INFO / SUPPORT]===================== -->
-    <section id="contact-info">
-        <div class="container contact-grid">
-            <div>
-                <h3>Email</h3>
-                <p><a href="mailto:Officeedgefacilitymanagement@gmail.com">Officeedgefacilitymanagement@gmail.com</a></p>
-            </div>
-            <div>
-                <h3>Phone</h3>
-                <p><a href="tel:+2348137830964">+234 813 783 0964</a></p>
-            </div>
-            <div>
-                <h3>Office</h3>
-                <p>Sokoto, Nigeria</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================[FOOTER SECTION]===================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="wordmark">
-                        <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
+                <div class="key-points">
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Tailored to Your Mandate</h4>
+                            <p>We adapt the conversation to your institution's specific goals, constraints, and
+                                operating context.</p>
+                        </div>
                     </div>
-                    <p>Infrastructure for prosperity</p>
-                </div>
-                <div>
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="overview.html">Platform Overview</a></li>
-                        <li><a href="modules.html">Core Modules</a></li>
-                        <li><a href="deployment.html">Deployment Models</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="governments.html">Governments</a></li>
-                        <li><a href="banks.html">Banks & Funds</a></li>
-                        <li><a href="enterprise.html">Enterprise</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
+
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Senior-Level Discussion</h4>
+                            <p>Led by our executive team with decades of experience in government, finance, and
+                                technology.</p>
+                        </div>
+                    </div>
+
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>No Obligation</h4>
+                            <p>A genuine exploration of whether and how we might work together, not a sales pitch.</p>
+                        </div>
+                    </div>
+
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Actionable Insights</h4>
+                            <p>Leave with concrete ideas for addressing fragmentation in your current systems.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
-                <div>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="security.html">Security</a>
-                    <a href="contact.html">Contact</a>
+
+            <div class="overview-stats">
+                <div class="stats-mini-card">
+                    <div class="mini-stat">
+                        <div class="mini-number">90</div>
+                        <div class="mini-label">Minutes</div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-number">15+</div>
+                        <div class="mini-label">Countries</div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-number">47</div>
+                        <div class="mini-label">Institutions</div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-number">100%</div>
+                        <div class="mini-label">Confidential</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-</body>
-<script src="./scripts/main.js"></script>
+<!-- =====================[WHO SHOULD ATTEND]===================== -->
+<section class="attend-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Who Should Attend</span>
+            <h2>Designed for Decision-Makers</h2>
+            <p>Strategic briefings are最适合 for senior leaders responsible for economic outcomes</p>
+        </div>
 
-</html>
+        <div class="attend-grid">
+            <div class="attend-card">
+                <div class="attend-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <h3>Government Leaders</h3>
+                <p>Ministers, permanent secretaries, and agency heads responsible for workforce, economic development,
+                    and policy coordination.</p>
+            </div>
+
+            <div class="attend-card">
+                <div class="attend-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>Development Banks</h3>
+                <p>Presidents, investment officers, and strategy leads seeking capital deployment with measurable
+                    economic returns.</p>
+            </div>
+
+            <div class="attend-card">
+                <div class="attend-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Institutional Leaders</h3>
+                <p>CEOs, presidents, and board members of major employers, training systems, and economic development
+                    organizations.</p>
+            </div>
+
+            <div class="attend-card">
+                <div class="attend-icon">
+                    <i class="fas fa-city"></i>
+                </div>
+                <h3>Regional Operators</h3>
+                <p>Mayors, city economic development directors, and regional planning authorities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[BRIEFING FORMAT]===================== -->
+<section class="format-section">
+    <div class="container">
+        <div class="format-grid">
+            <div class="format-visual">
+                <div class="format-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">15 min</div>
+                        <div class="timeline-content">
+                            <h4>Your Context</h4>
+                            <p>You share your institution's goals, challenges, and current initiatives.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">30 min</div>
+                        <div class="timeline-content">
+                            <h4>Our Approach</h4>
+                            <p>We present relevant case studies and how our infrastructure model applies to your
+                                context.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">30 min</div>
+                        <div class="timeline-content">
+                            <h4>Interactive Discussion</h4>
+                            <p>Open conversation about specific applications and potential next steps.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">15 min</div>
+                        <div class="timeline-content">
+                            <h4>Next Steps</h4>
+                            <p>Identify concrete actions and determine if deeper engagement makes sense.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="format-content">
+                <span class="section-badge">Format</span>
+                <h2>What to Expect</h2>
+                <p class="lead-text">Every briefing is tailored to your institution, but follows a proven structure that
+                    maximizes value for both parties.</p>
+
+                <div class="format-features">
+                    <div class="format-feature">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <h4>Virtual or In-Person</h4>
+                            <p>Conducted via secure video conference or at your offices / our global hubs</p>
+                        </div>
+                    </div>
+
+                    <div class="format-feature">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <h4>Pre-Reading Materials</h4>
+                            <p>We'll share relevant case studies and background materials in advance</p>
+                        </div>
+                    </div>
+
+                    <div class="format-feature">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Your Team</h4>
+                            <p>Bring 3-5 key stakeholders from relevant departments</p>
+                        </div>
+                    </div>
+
+                    <div class="format-feature">
+                        <i class="fas fa-lock"></i>
+                        <div>
+                            <h4>Strict Confidentiality</h4>
+                            <p>All discussions held under NDA upon request</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[TOPICS COVERED]===================== -->
+<section class="topics-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Topics Covered</span>
+            <h2>Tailored to Your Institution</h2>
+            <p>We customize each briefing to address your specific mandate and challenges</p>
+        </div>
+
+        <div class="topics-grid">
+            <div class="topic-card">
+                <i class="fas fa-sitemap"></i>
+                <h3>System Architecture</h3>
+                <p>How to design integrated opportunity pipelines across education, employment, and finance.</p>
+            </div>
+
+            <div class="topic-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Performance Intelligence</h3>
+                <p>Real-time visibility into talent flows, program effectiveness, and economic outcomes.</p>
+            </div>
+
+            <div class="topic-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Institutional Alignment</h3>
+                <p>Frameworks for coordinating ministries, employers, and funding sources.</p>
+            </div>
+
+            <div class="topic-card">
+                <i class="fas fa-coins"></i>
+                <h3>Capital Efficiency</h3>
+                <p>Deploying public and private capital through performance-linked pathways.</p>
+            </div>
+
+            <div class="topic-card">
+                <i class="fas fa-arrow-trend-up"></i>
+                <h3>Compounding Returns</h3>
+                <p>Structuring systems that produce increasing economic impact over time.</p>
+            </div>
+
+            <div class="topic-card">
+                <i class="fas fa-globe"></i>
+                <h3>Global Case Studies</h3>
+                <p>Relevant examples from our work across 15+ countries and 40+ institutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CASE STUDIES PREVIEW]===================== -->
+<section class="case-studies-section">
+    <div class="container">
+        <div class="case-studies-header">
+            <div>
+                <span class="section-badge">Recent Briefings</span>
+                <h2>Trusted by Leading Institutions</h2>
+            </div>
+            <a href="/case-studies" class="view-all">View All Case Studies <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="case-studies-grid">
+            <div class="case-card">
+                <div class="case-flag">
+                    <i class="fas fa-flag-usa"></i>
+                </div>
+                <h3>US Economic Development Administration</h3>
+                <p>Strategic briefing on workforce system integration across 12 states.</p>
+                <div class="case-meta">
+                    <span><i class="fas fa-calendar"></i> March 2024</span>
+                    <span><i class="fas fa-users"></i> 8 Attendees</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-flag">
+                    <i class="fas fa-flag"></i>
+                </div>
+                <h3>African Development Bank</h3>
+                <p>Briefing on capital deployment frameworks for youth employment.</p>
+                <div class="case-meta">
+                    <span><i class="fas fa-calendar"></i> February 2024</span>
+                    <span><i class="fas fa-users"></i> 12 Attendees</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-flag">
+                    <i class="fas fa-flag-uk"></i>
+                </div>
+                <h3>UK Cabinet Office</h3>
+                <p>Briefing on cross-departmental prosperity systems and data integration.</p>
+                <div class="case-meta">
+                    <span><i class="fas fa-calendar"></i> January 2024</span>
+                    <span><i class="fas fa-users"></i> 6 Attendees</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[BRIEFING FORM]===================== -->
+<section class="form-section">
+    <div class="container">
+        <div class="form-grid">
+            <div class="form-content">
+                <h2>Request a Strategic Briefing</h2>
+                <p>Complete this form and our team will respond within 48 hours to schedule a confidential conversation.
+                </p>
+
+                <div class="form-guarantees">
+                    <div class="guarantee">
+                        <i class="fas fa-lock"></i>
+                        <span>Your information is kept strictly confidential</span>
+                    </div>
+                    <div class="guarantee">
+                        <i class="fas fa-clock"></i>
+                        <span>We'll respond within 2 business days</span>
+                    </div>
+                    <div class="guarantee">
+                        <i class="fas fa-comment"></i>
+                        <span>No obligation, just a genuine conversation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrapper">
+                <form id="briefingForm" class="briefing-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name <span>*</span></label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name <span>*</span></label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Work Email <span>*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization">Organization <span>*</span></label>
+                        <input type="text" id="organization" name="organization" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">Title / Position <span>*</span></label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">Country <span>*</span></label>
+                            <select id="country" name="country" required>
+                                <option value="">Select country</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="CA">Canada</option>
+                                <option value="AU">Australia</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="JP">Japan</option>
+                                <option value="SG">Singapore</option>
+                                <option value="AE">UAE</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="BR">Brazil</option>
+                                <option value="IN">India</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="institutionType">Institution Type <span>*</span></label>
+                            <select id="institutionType" name="institutionType" required>
+                                <option value="">Select type</option>
+                                <option value="government">Government / Public Authority</option>
+                                <option value="bank">Development Bank / Fund</option>
+                                <option value="employer">Large Employer / Workforce Buyer</option>
+                                <option value="regional">Regional / City Operator</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">Primary Interest <span>*</span></label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select your primary interest</option>
+                            <option value="workforce">Workforce System Integration</option>
+                            <option value="capital">Capital Deployment Efficiency</option>
+                            <option value="policy">Policy Coordination</option>
+                            <option value="data">Data & Performance Intelligence</option>
+                            <option value="institutional">Institutional Alignment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Additional Context (Optional)</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Tell us about your specific challenges or questions..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Meeting Format</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="format" value="virtual" checked>
+                                <span>Virtual (Video Conference)</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="format" value="inperson">
+                                <span>In-Person</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="format" value="either">
+                                <span>Either</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree to the <a href="/privacy">Privacy Policy</a> and consent to being
+                            contacted regarding strategic briefing opportunities.</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Request Briefing</span>
+                        <i class="fas fa-calendar-check"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[TESTIMONIALS]===================== -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"The strategic briefing provided exactly the framework we needed to rethink our workforce development
+                    approach. Within three months, we initiated a pilot across four ministries."</p>
+                <div class="testimonial-author">
+                    <div class="author-image"></div>
+                    <div class="author-info">
+                        <strong>Maria Santos</strong>
+                        <span>Former Minister of Labor, Colombia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"A genuinely substantive conversation with no sales pressure. We came away with concrete ideas for
+                    structuring our development finance for greater economic impact."</p>
+                <div class="testimonial-author">
+                    <div class="author-image"></div>
+                    <div class="author-info">
+                        <strong>James Omondi</strong>
+                        <span>Former Governor, Central Bank of Kenya</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PREPARE SECTION]===================== -->
+<section class="prepare-section">
+    <div class="container">
+        <div class="prepare-box">
+            <h2>Prepare for Your Briefing</h2>
+            <p>To make the most of our conversation, consider these questions in advance:</p>
+
+            <div class="prepare-list">
+                <div class="prepare-item">
+                    <div class="prepare-number">1</div>
+                    <div>What are your institution's primary economic objectives for the next 3-5 years?</div>
+                </div>
+                <div class="prepare-item">
+                    <div class="prepare-number">2</div>
+                    <div>Where do you see fragmentation in your current systems?</div>
+                </div>
+                <div class="prepare-item">
+                    <div class="prepare-number">3</div>
+                    <div>How do you currently measure program and capital effectiveness?</div>
+                </div>
+                <div class="prepare-item">
+                    <div class="prepare-number">4</div>
+                    <div>Which institutions or stakeholders are critical to your success but difficult to coordinate?
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Form submission
+        const briefingForm = document.getElementById('briefingForm');
+
+        if (briefingForm) {
+            briefingForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Basic validation
+                const requiredFields = briefingForm.querySelectorAll('[required]');
+                let isValid = true;
+
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = '#b91c1c';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '#e9eef2';
+                    }
+                });
+
+                if (!isValid) {
+                    showNotification('Please fill in all required fields', 'error');
+                    return;
+                }
+
+                // Simulate submission
+                const submitBtn = briefingForm.querySelector('.btn-submit');
+                const originalText = submitBtn.innerHTML;
+
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+                    submitBtn.style.background = '#2e7d32';
+
+                    showNotification('Your briefing request has been sent. We\'ll respond within 48 hours.', 'success');
+
+                    briefingForm.reset();
+
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }, 1500);
+            });
+        }
+
+        // Notification function
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification notification-${type}`;
+            notification.innerHTML = `
+                    <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                    <span>${message}</span>
+                `;
+
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 5000);
+        }
+
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.attend-card, .topic-card, .case-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

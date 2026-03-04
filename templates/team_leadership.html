@@ -1,0 +1,482 @@
+{% extends "base.html" %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/team_leadership.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<section class="team-hero">
+    <div class="container">
+        <div class="team-hero-content">
+            <span class="hero-badge">Our People</span>
+            <h1>Leadership & Team</h1>
+            <p>The experience building prosperity infrastructure at scale</p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[LEADERSHIP GRID]===================== -->
+<section class="leadership-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Executive Team</span>
+            <h2>Senior Leadership</h2>
+            <p>Decades of experience across government, finance, and technology</p>
+        </div>
+
+        <div class="leadership-grid">
+            <!-- Leader 1 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/team/leader-1.jpg') }}" alt="Michael Chen">
+                    <div class="image-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Michael Chen</h3>
+                    <p class="position">Chief Executive Officer</p>
+                    <p class="bio">Former Undersecretary of Economic Policy, 20+ years in public sector transformation
+                        and institutional design.</p>
+                    <div class="expertise">
+                        <span class="expertise-tag">Public Policy</span>
+                        <span class="expertise-tag">System Design</span>
+                        <span class="expertise-tag">Institutional Reform</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/team/leader-2.jpg') }}" alt="Sarah Okonkwo">
+                    <div class="image-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Sarah Okonkwo</h3>
+                    <p class="position">Chief Operating Officer</p>
+                    <p class="bio">Former Director at World Bank, led multi-country infrastructure programs across
+                        Africa and Southeast Asia.</p>
+                    <div class="expertise">
+                        <span class="expertise-tag">Program Management</span>
+                        <span class="expertise-tag">Development Finance</span>
+                        <span class="expertise-tag">Africa Operations</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/team/leader-3.jpg') }}" alt="James Rodriguez">
+                    <div class="image-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>James Rodriguez</h3>
+                    <p class="position">Chief Technology Officer</p>
+                    <p class="bio">Former VP of Engineering at Palantir, architect of large-scale data systems for
+                        government clients.</p>
+                    <div class="expertise">
+                        <span class="expertise-tag">Data Architecture</span>
+                        <span class="expertise-tag">Government Systems</span>
+                        <span class="expertise-tag">AI/ML</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 4 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/team/leader-4.jpg') }}" alt="Elena Volkov">
+                    <div class="image-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Elena Volkov</h3>
+                    <p class="position">Chief Financial Officer</p>
+                    <p class="bio">Former Managing Director at European Investment Bank, structured $5B+ in development
+                        finance.</p>
+                    <div class="expertise">
+                        <span class="expertise-tag">Development Finance</span>
+                        <span class="expertise-tag">Capital Markets</span>
+                        <span class="expertise-tag">Risk Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 5 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/team/leader-5.jpg') }}" alt="Amara Okafor">
+                    <div class="image-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Amara Okafor</h3>
+                    <p class="position">Chief Policy Officer</p>
+                    <p class="bio">Former Senior Advisor to UK Cabinet Office, specialist in workforce policy and
+                        institutional coordination.</p>
+                    <div class="expertise">
+                        <span class="expertise-tag">Labor Policy</span>
+                        <span class="expertise-tag">Institutional Design</span>
+                        <span class="expertise-tag">Europe Operations</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 6 -->
+            <div class="team-card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/team/leader-6.jpg') }}" alt="David Park">
+                    <div class="image-overlay">
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>David Park</h3>
+                    <p class="position">Chief Strategy Officer</p>
+                    <p class="bio">Former Partner at McKinsey, led economic development practice for Asia-Pacific
+                        region.</p>
+                    <div class="expertise">
+                        <span class="expertise-tag">Strategic Planning</span>
+                        <span class="expertise-tag">Asia Markets</span>
+                        <span class="expertise-tag">Public-Private Partnerships</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[BOARD OF DIRECTORS]===================== -->
+<section class="board-section">
+    <div class="container">
+        <div class="section-header light">
+            <span class="section-badge">Board of Directors</span>
+            <h2>Governance & Oversight</h2>
+            <p>Distinguished leaders guiding our mission and impact</p>
+        </div>
+
+        <div class="board-grid">
+            <!-- Board Member 1 -->
+            <div class="board-card">
+                <div class="board-image">
+                    <img src="{{ url_for('static', filename='img/team/board-1.jpg') }}" alt="Robert Thornton">
+                </div>
+                <div class="board-info">
+                    <h4>Robert Thornton</h4>
+                    <p class="title">Chairman</p>
+                    <p class="credentials">Former US Secretary of Commerce</p>
+                </div>
+            </div>
+
+            <!-- Board Member 2 -->
+            <div class="board-card">
+                <div class="board-image">
+                    <img src="{{ url_for('static', filename='img/team/board-2.jpg') }}" alt="Maria Santos">
+                </div>
+                <div class="board-info">
+                    <h4>Maria Santos</h4>
+                    <p class="title">Vice Chair</p>
+                    <p class="credentials">Former President, Inter-American Development Bank</p>
+                </div>
+            </div>
+
+            <!-- Board Member 3 -->
+            <div class="board-card">
+                <div class="board-image">
+                    <img src="{{ url_for('static', filename='img/team/board-3.jpg') }}" alt="Thomas Weber">
+                </div>
+                <div class="board-info">
+                    <h4>Thomas Weber</h4>
+                    <p class="title">Director</p>
+                    <p class="credentials">Former CEO, Siemens Government Technologies</p>
+                </div>
+            </div>
+
+            <!-- Board Member 4 -->
+            <div class="board-card">
+                <div class="board-image">
+                    <img src="{{ url_for('static', filename='img/team/board-4.jpg') }}" alt="Aisha Al Maktoum">
+                </div>
+                <div class="board-info">
+                    <h4>Aisha Al Maktoum</h4>
+                    <p class="title">Director</p>
+                    <p class="credentials">Minister of Economic Development, UAE (ret.)</p>
+                </div>
+            </div>
+
+            <!-- Board Member 5 -->
+            <div class="board-card">
+                <div class="board-image">
+                    <img src="{{ url_for('static', filename='img/team/board-5.jpg') }}" alt="James Omondi">
+                </div>
+                <div class="board-info">
+                    <h4>James Omondi</h4>
+                    <p class="title">Director</p>
+                    <p class="credentials">Former Governor, Central Bank of Kenya</p>
+                </div>
+            </div>
+
+            <!-- Board Member 6 -->
+            <div class="board-card">
+                <div class="board-image">
+                    <img src="{{ url_for('static', filename='img/team/board-6.jpg') }}" alt="Catherine Moreau">
+                </div>
+                <div class="board-info">
+                    <h4>Catherine Moreau</h4>
+                    <p class="title">Director</p>
+                    <p class="credentials">Former Director General, OECD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[REGIONAL LEADERS]===================== -->
+<section class="regional-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Regional Leadership</span>
+            <h2>On the Ground Worldwide</h2>
+            <p>Local expertise across our operating regions</p>
+        </div>
+
+        <div class="regional-grid">
+            <!-- Americas -->
+            <div class="region-block">
+                <h3 class="region-title"><i class="fas fa-globe-americas"></i> Americas</h3>
+                <div class="region-leaders">
+                    <div class="region-leader">
+                        <span class="leader-name">Carlos Mendez</span>
+                        <span class="leader-role">Regional Director, Latin America</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Jennifer Walsh</span>
+                        <span class="leader-role">Director, US Programs</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Roberto Silva</span>
+                        <span class="leader-role">Lead, Brazil Operations</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMEA -->
+            <div class="region-block">
+                <h3 class="region-title"><i class="fas fa-globe-europe"></i> Europe & Africa</h3>
+                <div class="region-leaders">
+                    <div class="region-leader">
+                        <span class="leader-name">Fatima Diallo</span>
+                        <span class="leader-role">Regional Director, Africa</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Klaus Schmidt</span>
+                        <span class="leader-role">Director, European Programs</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Grace Oduro</span>
+                        <span class="leader-role">Lead, West Africa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asia-Pacific -->
+            <div class="region-block">
+                <h3 class="region-title"><i class="fas fa-globe-asia"></i> Asia-Pacific</h3>
+                <div class="region-leaders">
+                    <div class="region-leader">
+                        <span class="leader-name">Wei Zhang</span>
+                        <span class="leader-role">Regional Director, Asia</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Priya Krishnamurthy</span>
+                        <span class="leader-role">Director, South Asia</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Kenji Tanaka</span>
+                        <span class="leader-role">Lead, Southeast Asia</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle East -->
+            <div class="region-block">
+                <h3 class="region-title"><i class="fas fa-globe"></i> Middle East</h3>
+                <div class="region-leaders">
+                    <div class="region-leader">
+                        <span class="leader-name">Omar Al Hashimi</span>
+                        <span class="leader-role">Regional Director, MENA</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Layla Khalil</span>
+                        <span class="leader-role">Director, Gulf Programs</span>
+                    </div>
+                    <div class="region-leader">
+                        <span class="leader-name">Ahmed Mansour</span>
+                        <span class="leader-role">Lead, North Africa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[ADVISORY COUNCIL]===================== -->
+<section class="advisory-section">
+    <div class="container">
+        <div class="advisory-grid">
+            <div class="advisory-content">
+                <span class="section-badge">Strategic Advisors</span>
+                <h2>Global Advisory Council</h2>
+                <p>World-class expertise guiding our strategy and impact</p>
+
+                <div class="advisor-list">
+                    <div class="advisor-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Dr. Amartya Sen</strong>
+                            <span>Nobel Laureate in Economics</span>
+                        </div>
+                    </div>
+                    <div class="advisor-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Condoleezza Rice</strong>
+                            <span>Former US Secretary of State</span>
+                        </div>
+                    </div>
+                    <div class="advisor-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Sir Paul Collier</strong>
+                            <span>Professor of Economics, Oxford</span>
+                        </div>
+                    </div>
+                    <div class="advisor-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Ngozi Okonjo-Iweala</strong>
+                            <span>Director-General, WTO (former)</span>
+                        </div>
+                    </div>
+                    <div class="advisor-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Michael Porter</strong>
+                            <span>Professor, Harvard Business School</span>
+                        </div>
+                    </div>
+                    <div class="advisor-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>Fareed Zakaria</strong>
+                            <span>Author & Global Affairs Commentator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advisory-visual">
+                <div class="stats-card">
+                    <div class="stat">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Countries Represented</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Languages Spoken</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">400+</div>
+                        <div class="stat-label">Years Combined Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[JOIN THE TEAM]===================== -->
+<section class="join-section">
+    <div class="container">
+        <div class="join-box">
+            <div class="join-content">
+                <h2>Join our team</h2>
+                <p>Build prosperity infrastructure at global scale</p>
+                <a href="/careers" class="btn-join">
+                    <span>View Open Positions</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="join-values">
+                <div class="value-tag">Purpose-Driven</div>
+                <div class="value-tag">Global Impact</div>
+                <div class="value-tag">Institutional Scale</div>
+                <div class="value-tag">Mission First</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        // Observe cards and sections
+        document.querySelectorAll('.team-card, .board-card, .region-block, .advisor-item, .join-box').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stagger card animations
+        document.querySelectorAll('.team-card').forEach((card, index) => {
+            card.style.setProperty('--card-index', index);
+        });
+    });
+</script>
+{% endblock %}

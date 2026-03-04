@@ -304,7 +304,6 @@ body {
     background: var(--primary);
     color: var(--white);
     padding: 4rem 0 2rem;
-    /* margin-top: 6rem; */
     position: relative;
     overflow: hidden;
 }

@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Security | Prosperity System Hub</title>
-</head>
+{% block styles %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/security.css') }}">
+
+{% endblock %}
+
+{% block content %}
 <!-- 
 ██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
 ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
@@ -19,138 +16,672 @@
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
 -->
 
-<body>
-
-    <!-- ===================== NAVIGATION ===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
-            </a>
-
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
-                <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
-                <li class="nav-item"><a href="how.html" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="intelligence.html" class="nav-link">Intelligence</a></li>
-            </ul>
+<!-- =====================[SECURITY HERO]===================== -->
+<section class="security-hero">
+    <div class="container">
+        <div class="security-hero-content">
+            <span class="hero-badge">Security & Compliance</span>
+            <h1>Enterprise-Grade Security for Critical Infrastructure</h1>
+            <p>Our platform meets the highest standards of security, privacy, and compliance required by governments,
+                financial institutions, and enterprise organizations.</p>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero">
-        <div class="hero-compound">
-            <div class="hero-content">
-                <h1 class="hero-title">Security at Prosperity System Hub</h1>
-                <p class="hero-description">
-                    Protecting data and systems is our top priority. We adopt industry-standard security measures to
-                    ensure confidentiality, integrity, and availability of information.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===================== SECURITY CONTENT ===================== -->
-    <section id="security">
-        <div class="container">
-            <h2>Data Protection</h2>
-            <p>
-                All sensitive data is encrypted in transit using HTTPS/TLS protocols and at rest using AES-256
-                encryption. Access to data is strictly controlled and monitored.
-            </p>
-
-            <h2>Access Controls</h2>
-            <p>
-                Role-based access ensures only authorized personnel can access sensitive systems and information.
-                Multi-factor authentication (MFA) is enforced for administrative access.
-            </p>
-
-            <h2>Infrastructure Security</h2>
-            <p>
-                Our platform is hosted on secure servers with firewalls, intrusion detection systems (IDS),
-                and regular vulnerability scans to prevent unauthorized access.
-            </p>
-
-            <h2>Application Security</h2>
-            <p>
-                All applications are developed following secure coding practices. Regular penetration testing
-                and code reviews are conducted to mitigate potential vulnerabilities.
-            </p>
-
-            <h2>Monitoring & Incident Response</h2>
-            <p>
-                Continuous monitoring and logging are in place to detect and respond to potential security
-                incidents. Our incident response plan ensures timely containment and resolution.
-            </p>
-
-            <h2>Compliance</h2>
-            <p>
-                Prosperity System Hub complies with global data protection regulations and follows best practices
-                in cybersecurity and privacy, including ISO 27001 standards.
-            </p>
-
-            <h2>Continuous Improvement</h2>
-            <p>
-                Security is an ongoing priority. We continuously update our systems, processes, and training to
-                adapt to evolving threats.
-            </p>
-        </div>
-    </section>
-
-    <!-- ===================== FOOTER ===================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
-                    <p>Infrastructure for prosperity</p>
-                </div>
-
+<!-- =====================[TRUST BADGES]===================== -->
+<section class="badges-section">
+    <div class="container">
+        <div class="badges-grid">
+            <div class="badge-item">
+                <i class="fas fa-shield-alt"></i>
                 <div>
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="overview.html">Platform Overview</a></li>
-                        <li><a href="modules.html">Core Modules</a></li>
-                        <li><a href="deployment.html">Deployment Models</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="governments.html">Governments</a></li>
-                        <li><a href="banks.html">Banks & Funds</a></li>
-                        <li><a href="enterprise.html">Enterprise</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
+                    <strong>SOC 2 Type II</strong>
+                    <span>Certified</span>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
+            <div class="badge-item">
+                <i class="fas fa-check-circle"></i>
                 <div>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="security.html">Security</a>
-                    <a href="contact.html">Contact</a>
+                    <strong>GDPR</strong>
+                    <span>Compliant</span>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fas fa-lock"></i>
+                <div>
+                    <strong>ISO 27001</strong>
+                    <span>Certified</span>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fas fa-flag-usa"></i>
+                <div>
+                    <strong>FedRAMP</strong>
+                    <span>In Process</span>
+                </div>
+            </div>
+            <div class="badge-item">
+                <i class="fas fa-cloud"></i>
+                <div>
+                    <strong>Cloud Security</strong>
+                    <span>Alliance Member</span>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-</body>
-<script src="./scripts/main.js"></script>
-</html>
+<!-- =====================[SECURITY PRINCIPLES]===================== -->
+<section class="principles-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Our Approach</span>
+            <h2>Security by Design</h2>
+            <p>Security is not an add-on—it's embedded in every layer of our platform architecture</p>
+        </div>
+
+        <div class="principles-grid">
+            <div class="principle-card">
+                <div class="principle-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Defense in Depth</h3>
+                <p>Multiple layers of security controls protect data at rest, in transit, and during processing.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>Zero Trust Architecture</h3>
+                <p>Continuous verification of every access request, regardless of network location.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Full Transparency</h3>
+                <p>Complete visibility into security controls, audits, and compliance posture.</p>
+            </div>
+
+            <div class="principle-card">
+                <div class="principle-icon">
+                    <i class="fas fa-shield"></i>
+                </div>
+                <h3>Privacy by Default</h3>
+                <p>Data minimization and purpose limitation built into system design.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[COMPLIANCE FRAMEWORKS]===================== -->
+<section class="compliance-section">
+    <div class="container">
+        <div class="compliance-grid">
+            <div class="compliance-content">
+                <span class="section-badge">Compliance</span>
+                <h2>Meeting Global Standards</h2>
+                <p class="lead-text">PSHub maintains certifications and compliance with the world's most rigorous
+                    security frameworks.</p>
+
+                <div class="compliance-list">
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>SOC 2 Type II</strong>
+                            <span>Audited annually for security, availability, and confidentiality</span>
+                        </div>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>ISO 27001:2022</strong>
+                            <span>Information security management system certified</span>
+                        </div>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>GDPR</strong>
+                            <span>Full compliance with EU data protection requirements</span>
+                        </div>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>HIPAA</strong>
+                            <span>Technical safeguards for protected health information</span>
+                        </div>
+                    </div>
+                    <div class="compliance-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <strong>FedRAMP</strong>
+                            <span>In authorization process for government cloud</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="compliance-visual">
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>SOC 2</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>ISO 27001</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>GDPR</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>HIPAA</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>FedRAMP</span>
+                    </div>
+                    <div class="certificate-card">
+                        <i class="fas fa-certificate"></i>
+                        <span>CCPA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[DATA PROTECTION]===================== -->
+<section class="data-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Data Protection</span>
+            <h2>Your Data, Protected</h2>
+            <p>End-to-end encryption and strict access controls ensure your information remains secure</p>
+        </div>
+
+        <div class="data-grid">
+            <div class="data-card">
+                <i class="fas fa-lock"></i>
+                <h3>Encryption at Rest</h3>
+                <p>AES-256 encryption for all stored data, including backups and snapshots.</p>
+            </div>
+
+            <div class="data-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Encryption in Transit</h3>
+                <p>TLS 1.3 for all data transmission, with perfect forward secrecy.</p>
+            </div>
+
+            <div class="data-card">
+                <i class="fas fa-key"></i>
+                <h3>Key Management</h3>
+                <p>Customer-managed encryption keys (CMEK) available for enterprise customers.</p>
+            </div>
+
+            <div class="data-card">
+                <i class="fas fa-database"></i>
+                <h3>Data Isolation</h3>
+                <p>Strict logical separation of customer data in multi-tenant environments.</p>
+            </div>
+
+            <div class="data-card">
+                <i class="fas fa-eraser"></i>
+                <h3>Secure Deletion</h3>
+                <p>Cryptographic erasure and secure data destruction upon request.</p>
+            </div>
+
+            <div class="data-card">
+                <i class="fas fa-backup"></i>
+                <h3>Backup Security</h3>
+                <p>Encrypted, geographically distributed backups with access logging.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[ACCESS CONTROL]===================== -->
+<section class="access-section">
+    <div class="container">
+        <div class="access-grid">
+            <div class="access-visual">
+                <div class="access-diagram">
+                    <div class="access-layer layer-users">
+                        <i class="fas fa-users"></i>
+                        <span>Users</span>
+                    </div>
+                    <div class="access-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="access-layer layer-auth">
+                        <i class="fas fa-shield"></i>
+                        <span>Authentication</span>
+                    </div>
+                    <div class="access-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="access-layer layer-rbac">
+                        <i class="fas fa-diagram-project"></i>
+                        <span>RBAC & Policies</span>
+                    </div>
+                    <div class="access-arrow"><i class="fas fa-arrow-down"></i></div>
+                    <div class="access-layer layer-audit">
+                        <i class="fas fa-history"></i>
+                        <span>Audit Logging</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="access-content">
+                <span class="section-badge">Access Control</span>
+                <h2>Granular Permission Management</h2>
+                <p>Role-based access control (RBAC) with fine-grained permissions and multi-factor authentication.</p>
+
+                <div class="access-features">
+                    <div class="access-feature">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Multi-Factor Authentication</h4>
+                            <p>SMS, authenticator apps, hardware tokens, and biometrics</p>
+                        </div>
+                    </div>
+                    <div class="access-feature">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Single Sign-On</h4>
+                            <p>SAML 2.0, OIDC, and OAuth 2.0 integration with identity providers</p>
+                        </div>
+                    </div>
+                    <div class="access-feature">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Role-Based Access Control</h4>
+                            <p>Customizable roles with granular permissions per resource</p>
+                        </div>
+                    </div>
+                    <div class="access-feature">
+                        <i class="fas fa-check"></i>
+                        <div>
+                            <h4>Just-In-Time Access</h4>
+                            <p>Temporary elevated access with automatic revocation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[NETWORK SECURITY]===================== -->
+<section class="network-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Network Security</span>
+            <h2>Secure by Infrastructure</h2>
+            <p>Defense-in-depth network architecture protecting against external and internal threats</p>
+        </div>
+
+        <div class="network-grid">
+            <div class="network-card">
+                <i class="fas fa-firewall"></i>
+                <h3>Web Application Firewall</h3>
+                <p>OWASP Top 10 protection with custom rule sets and rate limiting.</p>
+            </div>
+
+            <div class="network-card">
+                <i class="fas fa-shield-halved"></i>
+                <h3>DDoS Mitigation</h3>
+                <p>Automatic detection and mitigation at the network edge.</p>
+            </div>
+
+            <div class="network-card">
+                <i class="fas fa-diagram-project"></i>
+                <h3>Network Segmentation</h3>
+                <p>Micro-segmentation with strict east-west traffic controls.</p>
+            </div>
+
+            <div class="network-card">
+                <i class="fas fa-search"></i>
+                <h3>Intrusion Detection</h3>
+                <p>24/7 monitoring with signature and anomaly-based detection.</p>
+            </div>
+
+            <div class="network-card">
+                <i class="fas fa-vpn"></i>
+                <h3>Private Connectivity</h3>
+                <p>AWS Direct Connect, Azure ExpressRoute, and VPN options.</p>
+            </div>
+
+            <div class="network-card">
+                <i class="fas fa-ip"></i>
+                <h3>IP Allowlisting</h3>
+                <p>Restrict access to trusted IP ranges and networks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[MONITORING & INCIDENT RESPONSE]===================== -->
+<section class="incident-section">
+    <div class="container">
+        <div class="incident-grid">
+            <div class="incident-content">
+                <span class="section-badge">Monitoring & Response</span>
+                <h2>24/7 Security Operations</h2>
+                <p>Our security team continuously monitors for threats and maintains a comprehensive incident response
+                    program.</p>
+
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-number">99.99%</div>
+                        <div class="metric-label">Uptime SLA</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">&lt;15min</div>
+                        <div class="metric-label">Response Time</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">24/7</div>
+                        <div class="metric-label">SOC Coverage</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">0</div>
+                        <div class="metric-label">Breaches</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="incident-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Detection</h4>
+                        <p>Automated monitoring and alerting across all systems</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Analysis</h4>
+                        <p>Security team investigates and triages alerts</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Containment</h4>
+                        <p>Immediate action to isolate and mitigate threats</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>Recovery</h4>
+                        <p>Restore services and implement preventive measures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[SECURITY AUDITS]===================== -->
+<section class="audit-section">
+    <div class="container">
+        <div class="audit-box">
+            <div class="audit-icon">
+                <i class="fas fa-file-contract"></i>
+            </div>
+            <h2>Third-Party Audits & Penetration Testing</h2>
+            <p>We engage leading security firms to conduct annual audits and penetration tests. Reports are available to
+                qualified customers under NDA.</p>
+
+            <div class="audit-details">
+                <div class="audit-detail">
+                    <i class="fas fa-calendar"></i>
+                    <span>Annual SOC 2 audits</span>
+                </div>
+                <div class="audit-detail">
+                    <i class="fas fa-bug"></i>
+                    <span>Quarterly penetration tests</span>
+                </div>
+                <div class="audit-detail">
+                    <i class="fas fa-code"></i>
+                    <span>Continuous vulnerability scanning</span>
+                </div>
+                <div class="audit-detail">
+                    <i class="fas fa-users"></i>
+                    <span>Independent security researchers</span>
+                </div>
+            </div>
+
+            <a href="#" class="audit-link">Request Audit Reports <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PRIVACY SECTION]===================== -->
+<section class="privacy-section">
+    <div class="container">
+        <div class="privacy-grid">
+            <div class="privacy-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Data Privacy</h3>
+                <p>We adhere to global privacy regulations including GDPR, CCPA, and LGPD.</p>
+                <ul>
+                    <li>Data minimization</li>
+                    <li>Purpose limitation</li>
+                    <li>Storage limitation</li>
+                    <li>Subject access rights</li>
+                </ul>
+            </div>
+
+            <div class="privacy-card">
+                <i class="fas fa-handshake"></i>
+                <h3>Data Processing Agreements</h3>
+                <p>Standard DPAs available with EU Standard Contractual Clauses.</p>
+                <ul>
+                    <li>GDPR-compliant terms</li>
+                    <li>Subprocessor disclosure</li>
+                    <li>Data Transfer Impact Assessments</li>
+                    <li>Technical safeguards</li>
+                </ul>
+            </div>
+
+            <div class="privacy-card">
+                <i class="fas fa-location-dot"></i>
+                <h3>Data Residency</h3>
+                <p>Choose where your data is stored: US, EU, UK, Canada, Australia, or Japan.</p>
+                <ul>
+                    <li>Regional data centers</li>
+                    <li>Data localization controls</li>
+                    <li>Cross-border transfer restrictions</li>
+                    <li>Local compliance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CUSTOMER TRUST]===================== -->
+<section class="trust-section">
+    <div class="container">
+        <div class="trust-header">
+            <span class="section-badge">Trusted By</span>
+            <h2>Institutions That Rely on PSHub Security</h2>
+        </div>
+
+        <div class="trust-logos">
+            <div class="trust-item">
+                <i class="fas fa-building"></i>
+                <span>US Treasury</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-building"></i>
+                <span>UK Cabinet Office</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-building"></i>
+                <span>World Bank</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-building"></i>
+                <span>European Commission</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-building"></i>
+                <span>African Dev Bank</span>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-building"></i>
+                <span>IMF</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[FAQ SECTION]===================== -->
+<section class="faq-section">
+    <div class="container">
+        <div class="faq-header">
+            <span class="section-badge">FAQs</span>
+            <h2>Security Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you offer a bug bounty program?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we maintain a private bug bounty program through HackerOne. Security researchers can request
+                        access by contacting security@pshub.io.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Can we perform our own security assessment?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we support customer-led security assessments with reasonable notice. Contact your account
+                        representative to schedule.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>What is your subprocessor list?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our subprocessor list is available upon request and in our DPA. We use AWS, Azure, and other
+                        leading cloud providers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>How do you handle security incidents?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>We have a formal incident response plan with notification timelines: critical issues within 24
+                        hours, others within 72 hours.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Is the platform available on government clouds?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we support deployment on AWS GovCloud, Azure Government, and other authorized government
+                        cloud environments.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h4>Do you offer SSO and MFA?</h4>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, SSO (SAML/OIDC) and MFA are included in all enterprise plans and can be enforced
+                        organization-wide.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CONTACT SECURITY]===================== -->
+<section class="contact-security-section">
+    <div class="container">
+        <div class="contact-security-box">
+            <div class="contact-security-content">
+                <h2>Have security questions?</h2>
+                <p>Our security team is available to address your specific requirements</p>
+            </div>
+            <div class="contact-security-buttons">
+                <a href="/contact" class="btn-primary">Contact Security Team</a>
+                <a href="/security/whitepaper" class="btn-outline-light">Download Security Whitepaper</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observe elements for animation
+        document.querySelectorAll('.principle-card, .data-card, .network-card, .privacy-card, .badge-item, .faq-item').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

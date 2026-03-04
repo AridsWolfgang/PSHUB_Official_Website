@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/overview.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -12,8 +12,8 @@
             <h1 class="hero-title">Prosperity infrastructure for governments, institutions, and markets.</h1>
             <p class="hero-description">Prosperity System Hub designs and operates systems that convert population
                 potential into measurable economic outcomes.</p>
-            <a href="briefing.html" class="btn hero-btn">Request a Demo</a>
-            <a href="overview.html" class="btn hero-btn">View the Platform</a>
+            <a href="{{ url_for('main.briefing') }}" class="btn hero-btn">Request a Demo</a>
+            <a href="{{ url_for('main.overview') }}" class="btn hero-btn">View the Platform</a>
         </div>
     </div>
 </section>

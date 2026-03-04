@@ -1,6 +1,5 @@
 # PROSPERITY SYSTEM HUB | OFFICIAL WEBSITE
 
-.....
 
 ## 📋 Overview
 

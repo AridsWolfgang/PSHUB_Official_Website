@@ -22,9 +22,9 @@ def how():
 def about():    
     return render_template("about.html")
 
-@main.route("/leadership")
-def leadership():
-    return render_template("leadership.html")
+@main.route("/team_leadership")
+def team_leadership():
+    return render_template("team_leadership.html")
 
 @main.route("/privacy")
 def privacy():  
@@ -49,3 +49,11 @@ def mission_vision():
 @main.route("/briefing")
 def briefing():
     return render_template("briefing.html")
+
+@main.route("/careers")
+def careers():
+    return render_template("careers.html")
+
+@main.route("/overview")
+def overview():
+    return render_template("overview.html")

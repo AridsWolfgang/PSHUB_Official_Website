@@ -10,9 +10,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/solutions.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mission_vision.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team_leadership.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/briefing.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/careers.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/overview.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/security.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/privacy.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
 </head>
 
 <body>
@@ -39,7 +46,7 @@
                     <ul>
                         <li class="nav-item"><a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission &
                                 Vision</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.leadership') }}" class="nav-link">Leadership &
+                        <li class="nav-item"><a href="{{ url_for('main.team_leadership') }}" class="nav-link">Leadership &
                                 Teams</a></li>
                         <li class="nav-item"><a href="{{ url_for('main.contact') }}" class="nav-link">Contact</a>
 
@@ -63,37 +70,21 @@
                     <p>Infrastructure for prosperity</p>
                 </div>
                 <div>
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
-
-                    </ul>
-                </div>
-                <div>
-                    <h4>Solutions</h4>
-                    <ul class="footer-links">
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
-                    </ul>
-                </div>
-                <div>
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li class="nav-item"><a href="{{ url_for('main.about') }}" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.leadership') }}" class="nav-link">Leadership &
+                        <li class="nav-item"><a href="{{ url_for('main.team_leadership') }}" class="nav-link">Leadership &
                                 Teams</a>
                         </li>
-                        <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Platform
-                                Overview</a></li>
+                        <li class="nav-item"><a href="{{ url_for('main.careers') }}" class="nav-link">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Quick Guide</h4>
+                    <ul class="footer-links">
+                        <li class="nav-item"><a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission & Vision</a>
+                        </li>
+                        <li class="nav-item"><a href="{{ url_for('main.contact') }}" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -102,6 +93,7 @@
                 <div>
                     <a href="{{ url_for('main.privacy') }}">Privacy</a>
                     <a href="{{ url_for('main.security') }}">Security</a>
+                    <a href="{{ url_for('main.overview') }}">Overview</a>
                     <a href="{{ url_for('main.contact') }}">Contact</a>
                 </div>
             </div>
