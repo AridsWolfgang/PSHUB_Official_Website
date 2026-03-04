@@ -45,7 +45,9 @@ body {
 /* =====================[HOME HERO]===================== */
 .home-hero {
     min-height: 90vh;
-    background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 100%);
+    /* background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 100%); */
+    background-image: url(/static/img/james-wiseman-vYGR3b_naPA-unsplash.jpg);
+    background-size: cover;
     position: relative;
     isolation: isolate;
     overflow: hidden;
@@ -81,7 +83,7 @@ body {
 }
 
 .home-hero-content {
-    max-width: 800px;
+    max-width: 100%;
     color: white;
 }
 
