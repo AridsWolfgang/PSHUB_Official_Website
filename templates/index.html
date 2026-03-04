@@ -4,120 +4,288 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/overview.css') }}">
 {% endblock %}
 
-{% block content %}
-<!-- =====================[HERO SECTION]===================== -->
-<section class="index-hero animated-bg" id="home">
-    <div class="index-hero-compound">
-        <div class="index-hero-content">
-            <h1 class="hero-title">Prosperity infrastructure for governments, institutions, and markets.</h1>
-            <p class="hero-description">Prosperity System Hub designs and operates systems that convert population
-                potential into measurable economic outcomes.</p>
-            <a href="{{ url_for('main.briefing') }}" class="btn hero-btn">Request a Demo</a>
-            <a href="{{ url_for('main.overview') }}" class="btn hero-btn">View the Platform</a>
+{% block content %} <!-- =====================[HERO SECTION]===================== -->
+<section class="home-hero">
+    <div class="container">
+        <div class="home-hero-content">
+            <span class="hero-badge">Prosperity Infrastructure</span>
+            <h1>Designing and operating systems that convert population potential into economic outcomes.</h1>
+            <p class="hero-description">An integrated platform enabling governments, institutions, and markets to build
+                measurable prosperity at scale.</p>
+            <div class="hero-buttons">
+                <a href="/overview" class="btn-primary">Explore the Platform</a>
+                <a href="/briefing" class="btn-outline-light">Request a Briefing</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<!-- =====================[TRUSTED PARTNERS]===================== -->
+<section class="partners-section">
+    <div class="container">
+        <div class="partners-header">
+            <span class="section-badge">Trusted By</span>
+        </div>
+        <div class="partners-grid">
+            <div class="partner-item"><i class="fas fa-building"></i> <span>US Treasury</span></div>
+            <div class="partner-item"><i class="fas fa-building"></i> <span>World Bank</span></div>
+            <div class="partner-item"><i class="fas fa-building"></i> <span>UK Cabinet Office</span></div>
+            <div class="partner-item"><i class="fas fa-building"></i> <span>African Dev Bank</span></div>
+            <div class="partner-item"><i class="fas fa-building"></i> <span>European Commission</span></div>
+            <div class="partner-item"><i class="fas fa-building"></i> <span>IMF</span></div>
         </div>
     </div>
 </section>
 
 <!-- =====================[PROBLEM SECTION]===================== -->
-<section id="problem">
-    <div class="container problem-grid">
-        <div class="problem-left">
-            <h2>Fragmentation is expensive.</h2>
-            <p class="supporting-copy">Most prosperity and workforce initiatives fail not due to lack of effort, but
-                because systems don't align.</p>
-        </div>
-        <div class="proof-list">
-            <div class="proof-item">Disconnected workforce programs</div>
-            <div class="proof-item">Institutional data silos</div>
-            <div class="proof-item">One-off interventions that don't compound</div>
-            <div class="proof-item">Capital deployed without feedback loops</div>
+<section class="problem-section">
+    <div class="container">
+        <div class="problem-grid">
+            <div class="problem-content">
+                <span class="section-badge">The Challenge</span>
+                <h2>Fragmentation is expensive.</h2>
+                <p class="lead-text">Most prosperity and workforce initiatives fail not due to lack of effort, but
+                    because systems don't align.</p>
+            </div>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Disconnected workforce programs</span>
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Institutional data silos</span>
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <span>One-off interventions that don't compound</span>
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Capital deployed without feedback loops</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- =====================[PLATFORM OVERVIEW SECTION]===================== -->
-<section id="product">
+<!-- =====================[SOLUTION OVERVIEW]===================== -->
+<section class="solution-overview-section">
     <div class="container">
-        <h2 class="product-title">What PSHub Actually Is</h2>
-        <p class="product-description">A platform that enables governments, institutions, and markets to design and
-            operate systems that convert population potential into measurable economic outcomes.</p>
-        <div class="platform-box">
-            <div class="platform-card">
-                <i class="fas fa-cogs"></i>
+        <div class="section-header">
+            <span class="section-badge">Our Solution</span>
+            <h2>Prosperity infrastructure for the 21st century</h2>
+            <p>PSHub provides the missing layer between institutions, capital, and people</p>
+        </div>
+
+        <div class="solution-cards">
+            <div class="solution-card">
+                <div class="card-icon">
+                    <i class="fas fa-sitemap"></i>
+                </div>
                 <h3>System Design</h3>
-                <p>Architect opportunity pipelines across education, employment, finance, and institutions.</p>
+                <p>Architect integrated opportunity pipelines across education, employment, and finance.</p>
+                <a href="/overview#architecture" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="platform-card">
-                <i class="fas fa-chart-line"></i>
+
+            <div class="solution-card featured">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
                 <h3>Platform Intelligence</h3>
-                <p>Provide real-time visibility into talent flows, program performance, and economic outcomes.</p>
+                <p>Real-time visibility into talent flows, program performance, and economic outcomes.</p>
+                <a href="/overview#intelligence" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="platform-card">
-                <i class="fas fa-sync-alt"></i>
-                <h3>Execution Orchestration</h3>
-                <p>Coordinate stakeholders, partners, and delivery mechanisms within a single operating system.</p>
+
+            <div class="solution-card">
+                <div class="card-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Institutional Alignment</h3>
+                <p>Coordinate ministries, employers, and funding sources under unified governance.</p>
+                <a href="/overview#coordination" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- =====================[WHO IT'S FOR SECTION]===================== -->
-<section id="solutions">
+<!-- =====================[IMPACT METRICS]===================== -->
+<section class="impact-section">
     <div class="container">
-        <h2 class="text-center">Who It's For</h2>
-        <p class="supporting-copy">Our platform is designed for organizations that are committed to creating measurable
-            economic outcomes through integrated systems.</p>
-        <div class="segments">
-            <a href="#governments" class="segment-pill">Governments & Public Authorities</a>
-            <a href="#banks" class="segment-pill">Development Banks & Funds</a>
-            <a href="#employers" class="segment-pill">Large Employers & Workforce Buyers</a>
-            <a href="#cities" class="segment-pill">Regional & City Operators</a>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="impact-number">15+</div>
+                <div class="impact-label">Countries</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-number">47</div>
+                <div class="impact-label">Institutional Partners</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-number">3.2M</div>
+                <div class="impact-label">Lives Impacted</div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-number">$2.5B</div>
+                <div class="impact-label">Capital Deployed</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- =====================[HOW IT WORKS SECTION]===================== -->
-<section id="how-it-works">
+<!-- =====================[WHO IT'S FOR]===================== -->
+<section class="audience-section">
     <div class="container">
-        <h2 class="text-center">How It Works</h2>
-        <p class="supporting-copy">Our platform enables organizations to systematically address fragmentation and build
-            integrated systems that drive measurable economic outcomes.</p>
-        <div class="flow-diagram">
-            <div class="flow-step">
-                <div class="step-number">01</div>
-                <h4>Diagnose fragmentation</h4>
-                <p>Map institutional gaps and program disconnects</p>
-            </div>
-            <div class="flow-step">
-                <div class="step-number">02</div>
-                <h4>Design the system</h4>
-                <p>Architect integrated opportunity pipelines</p>
-            </div>
-            <div class="flow-step">
-                <div class="step-number">03</div>
-                <h4>Integrate institutions & partners</h4>
-                <p>Align stakeholders within single operating model</p>
-            </div>
-            <div class="flow-step">
-                <div class="step-number">04</div>
-                <h4>Measure, optimize, compound</h4>
-                <p>Continuous performance feedback loops</p>
-            </div>
+        <div class="section-header">
+            <span class="section-badge">Who It's For</span>
+            <h2>Built for institutions committed to measurable outcomes</h2>
         </div>
-        <div class="text-center mt-2">
-            <a href="#how-it-works" class="btn btn-outline">Explore How It Works</a>
+
+        <div class="audience-grid">
+            <div class="audience-card">
+                <i class="fas fa-landmark"></i>
+                <h3>Governments</h3>
+                <p>Unify ministries, track workforce flows, and align policy execution with measurable outcomes.</p>
+            </div>
+
+            <div class="audience-card">
+                <i class="fas fa-university"></i>
+                <h3>Development Banks</h3>
+                <p>Trace capital to economic outputs and optimize deployment for maximum impact.</p>
+            </div>
+
+            <div class="audience-card">
+                <i class="fas fa-building"></i>
+                <h3>Large Employers</h3>
+                <p>Structured talent pipelines aligned to industrial demand with verified skill matching.</p>
+            </div>
+
+            <div class="audience-card">
+                <i class="fas fa-city"></i>
+                <h3>Regional Operators</h3>
+                <p>Localized economic coordination for targeted growth and labor market efficiency.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- =====================[FINAL CTA SECTION]===================== -->
-<section id="demo">
+<!-- =====================[HOW IT WORKS PREVIEW]===================== -->
+<section class="how-preview-section">
     <div class="container">
-        <div class="final-cta">
-            <h2>Prosperity works when systems do.</h2>
-            <a href="/pages/briefing.html" class="btn btn-primary btn-large">Book a Strategic Briefing</a>
+        <div class="how-grid">
+            <div class="how-content">
+                <span class="section-badge">How It Works</span>
+                <h2>A proven methodology</h2>
+                <p class="lead-text">Our approach transforms fragmented initiatives into coherent systems that compound
+                    over time.</p>
+
+                <div class="how-steps">
+                    <div class="how-step">
+                        <div class="step-number">01</div>
+                        <div class="step-text">
+                            <h4>Diagnose</h4>
+                            <p>Map institutional gaps and program disconnects</p>
+                        </div>
+                    </div>
+                    <div class="how-step">
+                        <div class="step-number">02</div>
+                        <div class="step-text">
+                            <h4>Design</h4>
+                            <p>Architect integrated opportunity pipelines</p>
+                        </div>
+                    </div>
+                    <div class="how-step">
+                        <div class="step-number">03</div>
+                        <div class="step-text">
+                            <h4>Deploy</h4>
+                            <p>Integrate institutions within single operating model</p>
+                        </div>
+                    </div>
+                    <div class="how-step">
+                        <div class="step-number">04</div>
+                        <div class="step-text">
+                            <h4>Optimize</h4>
+                            <p>Continuous performance feedback loops</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="/how-it-works" class="btn-link">Explore the full methodology <i
+                        class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="how-visual">
+                <div class="visual-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>87%</h4>
+                    <p>Improvement in program coordination</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- =====================[TESTIMONIALS]===================== -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"PSHub provided the infrastructure we needed to connect 14 agencies and 200+ programs. For the first
+                    time, we can see the whole workforce system."</p>
+                <div class="testimonial-author">
+                    <strong>Maria Santos</strong>
+                    <span>Former Minister of Labor, Colombia</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <i class="fas fa-quote-left"></i>
+                <p>"The platform transformed how we deploy capital. We now trace every dollar to employment outcomes,
+                    optimizing for economic return."</p>
+                <div class="testimonial-author">
+                    <strong>James Omondi</strong>
+                    <span>Former Governor, Central Bank of Kenya</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CTA SECTION]===================== -->
+<section class="home-cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Ready to build prosperity infrastructure?</h2>
+            <p>Schedule a strategic briefing with our team</p>
+            <div class="cta-buttons">
+                <a href="/briefing" class="btn-primary">Request a Briefing</a>
+                <a href="/contact" class="btn-outline-light">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.solution-card, .audience-card, .impact-card, .testimonial-card, .how-step').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
 {% endblock %}
