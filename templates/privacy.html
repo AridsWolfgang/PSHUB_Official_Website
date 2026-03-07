@@ -1,157 +1,570 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Privacy Policy | Prosperity System Hub</title>
-</head>
+{% block styles %}
 
-<!-- 
-██████╗ ██████╗  ██████╗ ███████╗██████╗ ███████╗██████╗ ██╗████████╗██╗   ██╗██████╗  ██████╗  ██████╗ 
-██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔══██╗██╔════╝██╔══██╗██║╚══██╔══╝╚██╗ ██╔╝╚════██╗██╔════╝ ██╔═████╗
-██████╔╝██████╔╝██║   ██║███████╗██████╔╝█████╗  ██████╔╝██║   ██║    ╚████╔╝  █████╔╝███████╗ ██║██╔██║
-██╔═══╝ ██╔══██╗██║   ██║╚════██║██╔═══╝ ██╔══╝  ██╔══██╗██║   ██║     ╚██╔╝   ╚═══██╗██╔═══██╗████╔╝██║
-██║     ██║  ██║╚██████╔╝███████║██║     ███████╗██║  ██║██║   ██║      ██║   ██████╔╝╚██████╔╝╚██████╔╝
-╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝                                                                                                        
--->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/privacy.css') }}">
 
-<body>
+{% endblock %}
 
-    <!-- ===================== NAVIGATION ===================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
-            </a>
-
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="product.html" class="nav-link">Product</a></li>
-                <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
-                <li class="nav-item"><a href="how.html" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="intelligence.html" class="nav-link">Intelligence</a></li>
-            </ul>
+{% block content %}
+<!-- =====================[PRIVACY HERO]===================== -->
+<section class="privacy-hero">
+    <div class="container">
+        <div class="privacy-hero-content">
+            <span class="hero-badge">Privacy & Compliance</span>
+            <h1>Privacy Policy</h1>
+            <p>How we collect, use, and protect your information</p>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- ===================== HERO ===================== -->
-    <section class="hero">
-        <div class="hero-compound">
-            <div class="hero-content">
-                <h1 class="hero-title">Privacy Policy</h1>
-                <p class="hero-description">
-                    We respect your privacy and are committed to protecting your personal information.
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- =====================[PRIVACY CONTENT]===================== -->
+<section class="privacy-content-section">
+    <div class="container">
+        <div class="privacy-grid">
+            <!-- Sidebar Navigation -->
+            <aside class="privacy-sidebar">
+                <div class="sidebar-sticky">
+                    <h3>Contents</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#introduction" class="sidebar-link active">Introduction</a></li>
+                        <li><a href="#information-collection" class="sidebar-link">Information We Collect</a></li>
+                        <li><a href="#how-we-use" class="sidebar-link">How We Use Information</a></li>
+                        <li><a href="#information-sharing" class="sidebar-link">Information Sharing</a></li>
+                        <li><a href="#data-security" class="sidebar-link">Data Security</a></li>
+                        <li><a href="#data-retention" class="sidebar-link">Data Retention</a></li>
+                        <li><a href="#your-rights" class="sidebar-link">Your Rights</a></li>
+                        <li><a href="#cookies" class="sidebar-link">Cookies & Tracking</a></li>
+                        <li><a href="#international-transfers" class="sidebar-link">International Transfers</a></li>
+                        <li><a href="#children-privacy" class="sidebar-link">Children's Privacy</a></li>
+                        <li><a href="#changes-policy" class="sidebar-link">Changes to Policy</a></li>
+                        <li><a href="#contact-us" class="sidebar-link">Contact Us</a></li>
+                    </ul>
 
-    <!-- ===================== PRIVACY CONTENT ===================== -->
-    <section id="privacy-policy">
-        <div class="container">
-            <h2>Information We Collect</h2>
-            <p>
-                We may collect personal information such as your name, email address, and organization details
-                when you interact with our website or request demos and services.
-            </p>
-
-            <h2>How We Use Your Information</h2>
-            <ul class="proof-list">
-                <li>To provide and improve our services</li>
-                <li>To communicate updates, offers, or announcements</li>
-                <li>To understand user engagement and enhance user experience</li>
-                <li>To comply with legal obligations</li>
-            </ul>
-
-            <h2>Data Security</h2>
-            <p>
-                We implement administrative, technical, and physical safeguards to protect your data from
-                unauthorized access, disclosure, or misuse.
-            </p>
-
-            <h2>Cookies & Tracking</h2>
-            <p>
-                Our website may use cookies and analytics tools to monitor site performance, understand
-                user behavior, and improve functionality. You may disable cookies through your browser settings,
-                though some features may not function correctly.
-            </p>
-
-            <h2>Third-Party Sharing</h2>
-            <p>
-                We do not sell your personal information. We may share data with trusted partners who support
-                our platform operations, provided they adhere to confidentiality and security standards.
-            </p>
-
-            <h2>Your Rights</h2>
-            <p>
-                You may request access to your personal data, request corrections, or ask for deletion. Please
-                contact us at <a href="mailto:contact@prosperitysystemhub.com">contact@prosperitysystemhub.com</a>
-                for inquiries regarding your information.
-            </p>
-
-            <h2>Policy Updates</h2>
-            <p>
-                We may update this Privacy Policy from time to time. Changes will be posted on this page with
-                a revised date.
-            </p>
-        </div>
-    </section>
-
-    <!-- =====================[FOOTER SECTION]===================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="wordmark">
-                        <img src="./assets/logo.png" alt="Prosperity System Hub Logo" class="logo-image">
+                    <div class="sidebar-cta">
+                        <h4>Questions?</h4>
+                        <p>Contact our Data Protection Officer</p>
+                        <a href="/contact" class="sidebar-button">Get in Touch</a>
                     </div>
-                    <p>Infrastructure for prosperity</p>
                 </div>
-                <div>
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="overview.html">Platform Overview</a></li>
-                        <li><a href="modules.html">Core Modules</a></li>
-                        <li><a href="deployment.html">Deployment Models</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Solutions</h4>
-                    <ul class="footer-links">
-                        <li><a href="governments.html">Governments</a></li>
-                        <li><a href="banks.html">Banks & Funds</a></li>
-                        <li><a href="enterprise.html">Enterprise</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
-                <div>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="security.html">Security</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+            </aside>
 
-</body>
-<script src="./scripts/main.js"></script>
-</html>
+            <!-- Main Content -->
+            <main class="privacy-main">
+                <div class="privacy-card">
+                    <div class="last-updated">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Last Updated: March 1, 2026</span>
+                    </div>
+
+                    <!-- Introduction -->
+                    <section id="introduction" class="policy-section">
+                        <h2>Introduction</h2>
+                        <p>Prosperity System Hub ("PSHub," "we," "our," or "us") is committed to protecting your
+                            privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your
+                            information when you visit our website or use our platform services.</p>
+                        <p>We adhere to applicable data protection laws, including the General Data Protection
+                            Regulation (GDPR), California Consumer Privacy Act (CCPA), and other relevant regulations.
+                            Please read this policy carefully to understand our practices regarding your information.
+                        </p>
+
+                        <div class="policy-highlight">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Our Commitment:</strong>
+                                <span>We process your data lawfully, fairly, and transparently. We only collect what's
+                                    necessary and never sell your personal information.</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Information We Collect -->
+                    <section id="information-collection" class="policy-section">
+                        <h2>Information We Collect</h2>
+
+                        <h3>Information You Provide</h3>
+                        <ul class="policy-list">
+                            <li><strong>Contact Information:</strong> Name, email address, phone number, organization
+                                name, and job title when you inquire about our services, request a briefing, or create
+                                an account.</li>
+                            <li><strong>Account Credentials:</strong> Username, password, and authentication information
+                                for platform access.</li>
+                            <li><strong>Communication Data:</strong> Information you provide when you contact us,
+                                including emails, messages, and feedback.</li>
+                            <li><strong>Form Submissions:</strong> Information submitted through forms on our website,
+                                including briefing requests, career applications, and contact forms.</li>
+                        </ul>
+
+                        <h3>Information Collected Automatically</h3>
+                        <ul class="policy-list">
+                            <li><strong>Usage Data:</strong> Pages visited, time spent on pages, referring website, and
+                                interactions with our site.</li>
+                            <li><strong>Device Information:</strong> IP address, browser type, operating system, and
+                                device identifiers.</li>
+                            <li><strong>Cookies and Similar Technologies:</strong> Information collected through
+                                cookies, web beacons, and similar tracking technologies.</li>
+                        </ul>
+
+                        <h3>Information from Third Parties</h3>
+                        <ul class="policy-list">
+                            <li><strong>Business Partners:</strong> Information from partners who refer you to our
+                                services.</li>
+                            <li><strong>Public Sources:</strong> Information from publicly available sources to verify
+                                institutional affiliations.</li>
+                        </ul>
+                    </section>
+
+                    <!-- How We Use Information -->
+                    <section id="how-we-use" class="policy-section">
+                        <h2>How We Use Your Information</h2>
+
+                        <div class="use-grid">
+                            <div class="use-item">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Provide Services</h4>
+                                <p>To deliver our platform services, process requests, and manage your account.</p>
+                            </div>
+                            <div class="use-item">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Communicate</h4>
+                                <p>To respond to inquiries, send updates, and provide customer support.</p>
+                            </div>
+                            <div class="use-item">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Improve Our Services</h4>
+                                <p>To analyze usage patterns and enhance user experience.</p>
+                            </div>
+                            <div class="use-item">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Security</h4>
+                                <p>To protect against unauthorized access and maintain platform security.</p>
+                            </div>
+                            <div class="use-item">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Legal Compliance</h4>
+                                <p>To comply with legal obligations and enforce our terms of service.</p>
+                            </div>
+                            <div class="use-item">
+                                <i class="fas fa-check-circle"></i>
+                                <h4>Business Operations</h4>
+                                <p>For internal purposes such as auditing and data analysis.</p>
+                            </div>
+                        </div>
+
+                        <div class="legal-basis">
+                            <h4>Legal Basis for Processing (GDPR)</h4>
+                            <p>For users in the European Economic Area, we process your data based on:</p>
+                            <ul>
+                                <li><strong>Contract performance:</strong> To provide our services under our agreement
+                                    with you.</li>
+                                <li><strong>Legitimate interests:</strong> To improve our services and ensure security.
+                                </li>
+                                <li><strong>Legal compliance:</strong> To comply with applicable laws and regulations.
+                                </li>
+                                <li><strong>Consent:</strong> Where you have provided explicit consent for specific
+                                    processing.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Information Sharing -->
+                    <section id="information-sharing" class="policy-section">
+                        <h2>Information Sharing and Disclosure</h2>
+                        <p>We do not sell, trade, or rent your personal information to third parties. We may share
+                            information in the following circumstances:</p>
+
+                        <div class="sharing-cards">
+                            <div class="sharing-card">
+                                <i class="fas fa-server"></i>
+                                <h4>Service Providers</h4>
+                                <p>With trusted vendors who assist in operating our platform and business (e.g., cloud
+                                    hosting, analytics, customer support).</p>
+                            </div>
+                            <div class="sharing-card">
+                                <i class="fas fa-building"></i>
+                                <h4>Institutional Partners</h4>
+                                <p>With partner institutions when you request services through collaborative programs.
+                                </p>
+                            </div>
+                            <div class="sharing-card">
+                                <i class="fas fa-gavel"></i>
+                                <h4>Legal Requirements</h4>
+                                <p>When required by law, court order, or to protect our rights and safety.</p>
+                            </div>
+                            <div class="sharing-card">
+                                <i class="fas fa-handshake"></i>
+                                <h4>Business Transfers</h4>
+                                <p>In connection with a merger, acquisition, or sale of assets.</p>
+                            </div>
+                        </div>
+
+                        <div class="data-processors">
+                            <h4>Our Subprocessors</h4>
+                            <p>We use the following service providers who may process your data:</p>
+                            <ul class="processor-list">
+                                <li><i class="fas fa-check"></i> Amazon Web Services (AWS) – Cloud infrastructure</li>
+                                <li><i class="fas fa-check"></i> Microsoft Azure – Additional cloud services</li>
+                                <li><i class="fas fa-check"></i> Salesforce – Customer relationship management</li>
+                                <li><i class="fas fa-check"></i> Zendesk – Customer support</li>
+                                <li><i class="fas fa-check"></i> Google Analytics – Website analytics</li>
+                            </ul>
+                            <p class="processor-note">All subprocessors are contractually bound to protect your data and
+                                process it only according to our instructions.</p>
+                        </div>
+                    </section>
+
+                    <!-- Data Security -->
+                    <section id="data-security" class="policy-section">
+                        <h2>Data Security</h2>
+
+                        <div class="security-badge">
+                            <i class="fas fa-lock"></i>
+                            <div>
+                                <h4>SOC 2 Type II Certified</h4>
+                                <p>Our security controls are independently audited annually.</p>
+                            </div>
+                        </div>
+
+                        <p>We implement appropriate technical and organizational measures to protect your personal
+                            information, including:</p>
+
+                        <div class="security-measures">
+                            <div class="measure">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Encryption at rest (AES-256) and in transit (TLS 1.3)</span>
+                            </div>
+                            <div class="measure">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Multi-factor authentication for platform access</span>
+                            </div>
+                            <div class="measure">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Regular security audits and penetration testing</span>
+                            </div>
+                            <div class="measure">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Strict access controls and employee training</span>
+                            </div>
+                            <div class="measure">
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 security monitoring and incident response</span>
+                            </div>
+                        </div>
+
+                        <p class="security-note">While we implement robust security measures, no method of transmission
+                            over the Internet is 100% secure. We cannot guarantee absolute security but will promptly
+                            notify you of any data breach in accordance with applicable laws.</p>
+                    </section>
+
+                    <!-- Data Retention -->
+                    <section id="data-retention" class="policy-section">
+                        <h2>Data Retention</h2>
+                        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined
+                            in this policy, unless a longer retention period is required or permitted by law.</p>
+
+                        <div class="retention-table">
+                            <div class="retention-row">
+                                <div class="retention-type">Account information</div>
+                                <div class="retention-period">Duration of account + 30 days</div>
+                            </div>
+                            <div class="retention-row">
+                                <div class="retention-type">Communication records</div>
+                                <div class="retention-period">3 years</div>
+                            </div>
+                            <div class="retention-row">
+                                <div class="retention-type">Usage data (anonymized)</div>
+                                <div class="retention-period">26 months</div>
+                            </div>
+                            <div class="retention-row">
+                                <div class="retention-type">Legal records</div>
+                                <div class="retention-period">As required by law</div>
+                            </div>
+                        </div>
+
+                        <p>When we no longer need your information, we will securely delete or anonymize it.</p>
+                    </section>
+
+                    <!-- Your Rights -->
+                    <section id="your-rights" class="policy-section">
+                        <h2>Your Rights and Choices</h2>
+
+                        <h3>Under GDPR (for EEA residents)</h3>
+                        <div class="rights-grid">
+                            <div class="right-item">
+                                <h4>Right to Access</h4>
+                                <p>Request a copy of your personal data</p>
+                            </div>
+                            <div class="right-item">
+                                <h4>Right to Rectification</h4>
+                                <p>Correct inaccurate or incomplete data</p>
+                            </div>
+                            <div class="right-item">
+                                <h4>Right to Erasure</h4>
+                                <p>Request deletion of your data</p>
+                            </div>
+                            <div class="right-item">
+                                <h4>Right to Restrict Processing</h4>
+                                <p>Limit how we use your data</p>
+                            </div>
+                            <div class="right-item">
+                                <h4>Right to Data Portability</h4>
+                                <p>Receive your data in a portable format</p>
+                            </div>
+                            <div class="right-item">
+                                <h4>Right to Object</h4>
+                                <p>Object to certain processing activities</p>
+                            </div>
+                        </div>
+
+                        <h3>Under CCPA (for California residents)</h3>
+                        <ul class="policy-list">
+                            <li><strong>Right to Know:</strong> Request information about the categories and specific
+                                pieces of personal information we have collected.</li>
+                            <li><strong>Right to Delete:</strong> Request deletion of your personal information.</li>
+                            <li><strong>Right to Opt-Out:</strong> Opt-out of the sale of your personal information (we
+                                do not sell your information).</li>
+                            <li><strong>Right to Non-Discrimination:</strong> Exercise your rights without
+                                discrimination.</li>
+                        </ul>
+
+                        <div class="rights-exercise">
+                            <h4>How to Exercise Your Rights</h4>
+                            <p>To exercise your rights, please contact us at:</p>
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>privacy@pshub.io</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-phone"></i>
+                                    <span>+1 (212) 555-1234</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-link"></i>
+                                    <span><a href="/contact">Contact Form</a></span>
+                                </div>
+                            </div>
+                            <p class="rights-note">We will respond to your request within 30 days. We may need to verify
+                                your identity before processing your request.</p>
+                        </div>
+                    </section>
+
+                    <!-- Cookies & Tracking -->
+                    <section id="cookies" class="policy-section">
+                        <h2>Cookies and Tracking Technologies</h2>
+                        <p>We use cookies and similar technologies to enhance your experience, analyze traffic, and
+                            personalize content.</p>
+
+                        <div class="cookies-table">
+                            <h4>Types of Cookies We Use</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Purpose</th>
+                                        <th>Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Essential Cookies</td>
+                                        <td>Required for website functionality</td>
+                                        <td>Session / Persistent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Analytics Cookies</td>
+                                        <td>Understand how visitors use our site</td>
+                                        <td>Up to 26 months</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Preference Cookies</td>
+                                        <td>Remember your settings</td>
+                                        <td>1 year</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Marketing Cookies</td>
+                                        <td>Personalize content and ads</td>
+                                        <td>90 days</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cookie-control">
+                            <h4>Managing Cookies</h4>
+                            <p>You can control cookies through your browser settings. Disabling certain cookies may
+                                affect website functionality.</p>
+                            <div class="browser-links">
+                                <a href="#" class="browser-link"><i class="fab fa-chrome"></i> Chrome</a>
+                                <a href="#" class="browser-link"><i class="fab fa-firefox"></i> Firefox</a>
+                                <a href="#" class="browser-link"><i class="fab fa-safari"></i> Safari</a>
+                                <a href="#" class="browser-link"><i class="fab fa-edge"></i> Edge</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- International Data Transfers -->
+                    <section id="international-transfers" class="policy-section">
+                        <h2>International Data Transfers</h2>
+                        <p>As a global organization, we may transfer your information to countries outside your home
+                            country, including the United States, where our servers are located.</p>
+
+                        <div class="transfer-mechanisms">
+                            <h4>Transfer Safeguards</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Standard Contractual Clauses:</strong> We use
+                                    EU-approved contract clauses for data transfers from the EEA.</li>
+                                <li><i class="fas fa-check"></i> <strong>Privacy Shield:</strong> For transfers to
+                                    certified organizations (where applicable).</li>
+                                <li><i class="fas fa-check"></i> <strong>Binding Corporate Rules:</strong> Internal data
+                                    protection rules for our group entities.</li>
+                            </ul>
+                        </div>
+
+                        <p>By using our services, you consent to the transfer of your information to countries that may
+                            have different data protection laws than your jurisdiction. We take appropriate safeguards
+                            to protect your information in accordance with this policy.</p>
+                    </section>
+
+                    <!-- Children's Privacy -->
+                    <section id="children-privacy" class="policy-section">
+                        <h2>Children's Privacy</h2>
+                        <p>Our services are not directed to individuals under the age of 16. We do not knowingly collect
+                            personal information from children. If you become aware that a child has provided us with
+                            personal information, please contact us, and we will take steps to delete such information.
+                        </p>
+                    </section>
+
+                    <!-- Changes to Policy -->
+                    <section id="changes-policy" class="policy-section">
+                        <h2>Changes to This Privacy Policy</h2>
+                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices,
+                            technologies, legal requirements, or other factors. When we make material changes, we will
+                            notify you by email (if you have an account) or through a prominent notice on our website.
+                        </p>
+
+                        <div class="version-history">
+                            <h4>Version History</h4>
+                            <ul>
+                                <li><strong>March 1, 2026:</strong> Current version</li>
+                                <li><strong>January 15, 2025:</strong> Updated subprocessor list</li>
+                                <li><strong>October 1, 2024:</strong> Initial version</li>
+                            </ul>
+                        </div>
+
+                        <p>We encourage you to review this policy periodically to stay informed about how we protect
+                            your information.</p>
+                    </section>
+
+                    <!-- Contact Us -->
+                    <section id="contact-us" class="policy-section">
+                        <h2>Contact Us</h2>
+
+                        <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data
+                            practices, please contact our Data Protection Officer:</p>
+
+                        <div class="contact-block">
+                            <div class="contact-info">
+                                <div><i class="fas fa-envelope"></i> <strong>Email:</strong> dpo@pshub.io</div>
+                                <div><i class="fas fa-phone"></i> <strong>Phone:</strong> +1 (212) 555-1234</div>
+                                <div><i class="fas fa-building"></i> <strong>Mail:</strong> Data Protection Officer, 200
+                                    Park Avenue, Suite 1700, New York, NY 10166, USA</div>
+                            </div>
+                        </div>
+
+                        <h4>EU Representative</h4>
+                        <p>For individuals in the European Union, our EU representative is:</p>
+                        <div class="contact-info">
+                            <div>PSHub EU Representative<br>1 Poultry, London EC2R 8EJ, United
+                                Kingdom<br>eu.rep@pshub.io</div>
+                        </div>
+
+                        <h4>Supervisory Authority</h4>
+                        <p>You have the right to lodge a complaint with your local data protection authority. For the
+                            UK, the Information Commissioner's Office (ICO); for the EU, your national data protection
+                            authority.</p>
+
+                        <div class="contact-actions">
+                            <a href="/contact" class="btn-primary">Contact Us</a>
+                            <a href="#" class="btn-outline">Download Privacy Policy (PDF)</a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PRIVACY CTA]===================== -->
+<section class="privacy-cta">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Questions about your data?</h2>
+            <p>Our Data Protection Officer is here to help</p>
+            <a href="/contact" class="btn-primary">Contact DPO</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Sidebar navigation active state on scroll
+        const sections = document.querySelectorAll('.policy-section');
+        const navLinks = document.querySelectorAll('.sidebar-link');
+
+        function updateActiveNav() {
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        updateActiveNav();
+
+        // Smooth scroll for sidebar links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion (if any FAQs exist)
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            }
+        });
+    });
+</script>
+{% endblock %}
