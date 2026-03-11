@@ -1,6 +1,6 @@
 /* =====================[SERVICES PAGE STYLES]===================== */
 :root {
-    --primary: #0f2b4b;
+    /* --primary: #0f2b4b;
     --primary-dark: #0a1e36;
     --primary-light: #1e3a5f;
     --accent: #c7a254;
@@ -11,7 +11,7 @@
     --text-lighter: #64748b;
     --background: #ffffff;
     --background-alt: #f8fafc;
-    --border: #e9eef2;
+    --border: #e9eef2; */
     --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.02);
     --shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
     --shadow-lg: 0 30px 50px rgba(15, 43, 75, 0.08);

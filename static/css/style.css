@@ -3,9 +3,9 @@
     --primary: #0f2b4b;
     --primary-dark: #0a1e36;
     --primary-light: #1e3a5f;
-    --accent: #c7a254;
-    --accent-light: #d9b771;
-    --accent-dark: #b38b3f;
+    --accent: #75B06F;
+    --accent-light: #DAD887;
+    --accent-dark: #486b44;
     --text: #1e293b;
     --text-light: #475569;
     --text-lighter: #64748b;
@@ -45,8 +45,8 @@ body {
 /* =====================[HOME HERO]===================== */
 .home-hero {
     min-height: 90vh;
-    /* background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 100%); */
-    background-image: url(/static/img/james-wiseman-vYGR3b_naPA-unsplash.jpg);
+    background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 100%);
+    /* background-image: url(/static/img/james-wiseman-vYGR3b_naPA-unsplash.jpg); */
     background-size: cover;
     position: relative;
     isolation: isolate;
@@ -136,9 +136,10 @@ body {
 }
 
 .btn-primary:hover {
-    background: white;
+    background: var(--primary);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    color: var(--accent-light);
 }
 
 .btn-outline-light {
@@ -767,6 +768,14 @@ body {
 }
 
 @media (max-width: 480px) {
+   
+       .container {
+        padding: 0 1rem;
+    }
+    .home-hero{
+        min-height: 60vh;
+    }
+
     .home-hero-content h1 {
         font-size: 2rem;
     }

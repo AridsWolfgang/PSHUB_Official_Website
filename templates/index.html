@@ -9,13 +9,12 @@
 <section class="home-hero">
     <div class="container">
         <div class="home-hero-content">
-            <span class="hero-badge">Prosperity Infrastructure</span>
-            <h1>Designing and operating systems that convert population potential into economic outcomes.</h1>
-            <p class="hero-description">An integrated platform enabling governments, institutions, and markets to build
-                measurable prosperity at scale.</p>
+            <!-- <span class="hero-badge">Prosperity Infrastructure</span> -->
+            <h1>Building the Operating Systems for Prosperity.</h1>
+            <p class="hero-description">PsHUB is a development consulting, GovTech, innovation, and systems implementation firm helping governments, development partners, and private sector actors design and deploy scalable prosperity systems across Africa and the Global South.</p>
             <div class="hero-buttons">
-                <a href="/overview" class="btn-primary">Explore the Platform</a>
-                <a href="/briefing" class="btn-outline-light">Request a Briefing</a>
+                <a href="{{ url_for('main.solutions') }}" class="btn-primary">Explore our Solutions</a>
+                <a href="{{ url_for('main.overview') }}" class="btn-outline-light">Discover our Platform</a>
             </div>
         </div>
     </div>
@@ -25,32 +24,14 @@
     </div>
 </section>
 
-<!-- =====================[TRUSTED PARTNERS]===================== -->
-<section class="partners-section">
-    <div class="container">
-        <div class="partners-header">
-            <span class="section-badge">Trusted By</span>
-        </div>
-        <div class="partners-grid">
-            <div class="partner-item"><i class="fas fa-building"></i> <span>US Treasury</span></div>
-            <div class="partner-item"><i class="fas fa-building"></i> <span>World Bank</span></div>
-            <div class="partner-item"><i class="fas fa-building"></i> <span>UK Cabinet Office</span></div>
-            <div class="partner-item"><i class="fas fa-building"></i> <span>African Dev Bank</span></div>
-            <div class="partner-item"><i class="fas fa-building"></i> <span>European Commission</span></div>
-            <div class="partner-item"><i class="fas fa-building"></i> <span>IMF</span></div>
-        </div>
-    </div>
-</section>
-
 <!-- =====================[PROBLEM SECTION]===================== -->
 <section class="problem-section">
     <div class="container">
         <div class="problem-grid">
             <div class="problem-content">
-                <span class="section-badge">The Challenge</span>
-                <h2>Fragmentation is expensive.</h2>
-                <p class="lead-text">Most prosperity and workforce initiatives fail not due to lack of effort, but
-                    because systems don't align.</p>
+                <span class="section-badge">The Problems</span>
+                <h2>Development Systems are Fragmented.</h2>
+                <p class="lead-text">Governments, donors, and corporates want systems transformation, yet most initiatives remain fragmented projects.</p>
             </div>
             <div class="problem-list">
                 <div class="problem-item">
@@ -78,44 +59,53 @@
 <section class="solution-overview-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Our Solution</span>
-            <h2>Prosperity infrastructure for the 21st century</h2>
-            <p>PSHub provides the missing layer between institutions, capital, and people</p>
+            <span class="section-badge">What we do</span>
+            <h2>We integrate four critical capabilities to build prosperity systems.</h2>
+            <!-- <p>PSHub provides the missing layer between institutions, capital, and people</p> -->
         </div>
 
         <div class="solution-cards">
             <div class="solution-card">
                 <div class="card-icon">
-                    <i class="fas fa-sitemap"></i>
+                    <i class="fas fa-bullseye"></i>
                 </div>
-                <h3>System Design</h3>
-                <p>Architect integrated opportunity pipelines across education, employment, and finance.</p>
-                <a href="/overview#architecture" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                <h3>Strategic Advisory</h3>
+                <p>Policy advisory, insititutional reform, systems diagnostics, public sector modernization.</p>
+                <a href="/services" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="solution-card featured">
                 <div class="card-icon">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-cogs"></i>
                 </div>
-                <h3>Platform Intelligence</h3>
-                <p>Real-time visibility into talent flows, program performance, and economic outcomes.</p>
-                <a href="/overview#intelligence" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                <h3>Systems Implementation</h3>
+                <p>Program design, LGA-level delivery, M&E, government technical support.</p>
+                <a href="/services" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
 
             <div class="solution-card">
                 <div class="card-icon">
-                    <i class="fas fa-handshake"></i>
+                    <i class="fas fa-cloud"></i>
                 </div>
-                <h3>Institutional Alignment</h3>
-                <p>Coordinate ministries, employers, and funding sources under unified governance.</p>
-                <a href="/overview#coordination" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                <h3>Technology & Platforms</h3>
+                <p>Digital public infrastructure, data platforms, AI decision systems, sub-national dashboards.</p>
+                <a href="/services" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+             <div class="solution-card">
+                <div class="card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Innovation & Ventures</h3>
+                <p>Venture incubation, innovation labs, climate enterprises, GovTech pilots.</p>
+                <a href="/services" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- =====================[IMPACT METRICS]===================== -->
-<section class="impact-section">
+<!-- <section class="impact-section">
     <div class="container">
         <div class="impact-grid">
             <div class="impact-card">
@@ -136,7 +126,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- =====================[WHO IT'S FOR]===================== -->
 <section class="audience-section">
@@ -150,25 +140,25 @@
             <div class="audience-card">
                 <i class="fas fa-landmark"></i>
                 <h3>Governments</h3>
-                <p>Unify ministries, track workforce flows, and align policy execution with measurable outcomes.</p>
+                <p>Ministries, Commissions, Sub-national governments, LGAs</p>
             </div>
 
             <div class="audience-card">
-                <i class="fas fa-university"></i>
-                <h3>Development Banks</h3>
-                <p>Trace capital to economic outputs and optimize deployment for maximum impact.</p>
+                <i class="fas fa-handshake"></i>
+                <h3>Development Partners</h3>
+                <p>Multilaterals, bilateral agencies, UN, foundations</p>
             </div>
 
             <div class="audience-card">
                 <i class="fas fa-building"></i>
-                <h3>Large Employers</h3>
-                <p>Structured talent pipelines aligned to industrial demand with verified skill matching.</p>
+                <h3>Corporate Organizations</h3>
+                <p>ESG programs, market development, inclusive supply chains</p>
             </div>
 
             <div class="audience-card">
-                <i class="fas fa-city"></i>
-                <h3>Regional Operators</h3>
-                <p>Localized economic coordination for targeted growth and labor market efficiency.</p>
+                <i class="fas fa-users"></i>
+                <h3>Civil Society & Youth</h3>
+                <p>CSO operating systems, youth employment platforms, enterprise ecosystems</p>
             </div>
         </div>
     </div>
@@ -215,7 +205,7 @@
                     </div>
                 </div>
 
-                <a href="/how-it-works" class="btn-link">Explore the full methodology <i
+                <a href="/how" class="btn-link">Explore the full methodology <i
                         class="fas fa-arrow-right"></i></a>
             </div>
 
@@ -231,7 +221,7 @@
 </section>
 
 <!-- =====================[TESTIMONIALS]===================== -->
-<section class="testimonials-section">
+<!-- <section class="testimonials-section">
     <div class="container">
         <div class="testimonials-grid">
             <div class="testimonial-card">
@@ -255,17 +245,15 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- =====================[CTA SECTION]===================== -->
 <section class="home-cta-section">
     <div class="container">
         <div class="cta-box">
             <h2>Ready to build prosperity infrastructure?</h2>
-            <p>Schedule a strategic briefing with our team</p>
             <div class="cta-buttons">
                 <a href="/briefing" class="btn-primary">Request a Briefing</a>
-                <a href="/contact" class="btn-outline-light">Contact Us</a>
             </div>
         </div>
     </div>

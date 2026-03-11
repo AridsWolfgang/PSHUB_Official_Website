@@ -1,34 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Prosperity System Hub | Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/solutions.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/mission_vision.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/team_leadership.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/briefing.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/careers.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/overview.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/security.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/privacy.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/solutions.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mission_vision.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team_leadership.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/briefing.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/careers.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/overview.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/security.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/privacy.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-
     <!-- =====================[NAVIGATION SECTION]===================== -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="{{ url_for('main.home') }}" class="logo">
-                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" />
             </a>
 
             <div class="menu-toggle" id="mobile-menu">
@@ -38,18 +43,27 @@
             </div>
 
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="{{ url_for('main.services') }}" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="{{ url_for('main.solutions') }}" class="nav-link">Solutions</a></li>
-                <li class="nav-item"><a href="{{ url_for('main.how') }}" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="{{ url_for('main.about') }}" class="nav-link"><span>About Us</span>
+                <li class="nav-item">
+                    <a href="{{ url_for('main.services') }}" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('main.solutions') }}" class="nav-link">Solutions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('main.how') }}" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('main.about') }}" class="nav-link"><span>About Us</span>
                         <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></a>
                     <ul>
-                        <li class="nav-item"><a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission &
-                                Vision</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.team_leadership') }}" class="nav-link">Leadership &
-                                Teams</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.contact') }}" class="nav-link">Contact</a>
-
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission & Vision</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.team_leadership') }}" class="nav-link">Leadership & Teams</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.contact') }}" class="nav-link">Contact</a>
                         </li>
                     </ul>
                 </li>
@@ -65,27 +79,54 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="wordmark">
-                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="footer-logo">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="" class="footer-logo" />
                     </div>
                     <p>Infrastructure for prosperity</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
                 </div>
                 <div>
-                    <h4>Company</h4>
+                    <h4>Useful Links</h4>
                     <ul class="footer-links">
-                        <li class="nav-item"><a href="{{ url_for('main.about') }}" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="{{ url_for('main.team_leadership') }}" class="nav-link">Leadership &
-                                Teams</a>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.briefing') }}" class="nav-link">Briefing</a>
                         </li>
-                        <li class="nav-item"><a href="{{ url_for('main.careers') }}" class="nav-link">Careers</a></li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.careers') }}" class="nav-link">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.overview') }}" class="nav-link">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.contact') }}" class="nav-link">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.team_leadership') }}" class="nav-link">Leadership & Teams</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h4>Quick Guide</h4>
                     <ul class="footer-links">
-                        <li class="nav-item"><a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission & Vision</a>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.services') }}" class="nav-link">Services</a>
                         </li>
-                        <li class="nav-item"><a href="{{ url_for('main.contact') }}" class="nav-link">Contact</a></li>
-                         <li class="nav-item"><a href="{{ url_for('main.overview') }}" class="nav-link">Overview</a></li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.solutions') }}" class="nav-link">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.overview') }}" class="nav-link">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.how') }}" class="nav-link">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('main.mission_vision') }}" class="nav-link">Mission & Vision</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -94,8 +135,6 @@
                 <div>
                     <a href="{{ url_for('main.privacy') }}">Privacy</a>
                     <a href="{{ url_for('main.security') }}">Security</a>
-                    <a href="{{ url_for('main.overview') }}">Overview</a>
-                    <a href="{{ url_for('main.contact') }}">Contact</a>
                 </div>
             </div>
         </div>
@@ -106,20 +145,22 @@
 {% block scripts %}
 <script>
     // Mobile Menu Toggle with smooth animation
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.getElementById('nav-menu');
-    const navbar = document.getElementById('navbar');
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navMenu = document.getElementById("nav-menu");
+    const navbar = document.getElementById("navbar");
 
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    mobileMenu.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+        navMenu.classList.toggle("active");
 
         // Prevent body scroll when menu is open
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        document.body.style.overflow = navMenu.classList.contains("active")
+            ? "hidden"
+            : "";
 
         // Add animation to menu items when opening
-        if (navMenu.classList.contains('active')) {
-            const menuItems = navMenu.querySelectorAll('.nav-item');
+        if (navMenu.classList.contains("active")) {
+            const menuItems = navMenu.querySelectorAll(".nav-item");
             menuItems.forEach((item, index) => {
                 item.style.animation = `slideIn 0.4s ease-out ${index * 0.1}s both`;
             });
@@ -127,67 +168,69 @@
     });
 
     // Close menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
         });
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+    document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && navMenu.classList.contains("active")) {
+            mobileMenu.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
         }
     });
 
     // Handle window resize
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflow = '';
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains("active")) {
+            mobileMenu.classList.remove("active");
+            navMenu.classList.remove("active");
+            document.body.style.overflow = "";
         }
     });
 
     // Scroll reveal animation (optional)
     function revealOnScroll() {
-        const reveals = document.querySelectorAll('.reveal');
+        const reveals = document.querySelectorAll(".reveal");
 
-        reveals.forEach(element => {
+        reveals.forEach((element) => {
             const windowHeight = window.innerHeight;
             const elementTop = element.getBoundingClientRect().top;
             const elementVisible = 150;
 
             if (elementTop < windowHeight - elementVisible) {
-                element.classList.add('active');
+                element.classList.add("active");
             }
         });
     }
 
-    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener("scroll", revealOnScroll);
 
     // Add floating animation to icons on hover
-    document.querySelectorAll('.nav-link i, .footer-links i').forEach(icon => {
-        icon.addEventListener('mouseenter', () => {
-            icon.style.animation = 'float 1s ease-in-out infinite';
-        });
+    document
+        .querySelectorAll(".nav-link i, .footer-links i")
+        .forEach((icon) => {
+            icon.addEventListener("mouseenter", () => {
+                icon.style.animation = "float 1s ease-in-out infinite";
+            });
 
-        icon.addEventListener('mouseleave', () => {
-            icon.style.animation = '';
+            icon.addEventListener("mouseleave", () => {
+                icon.style.animation = "";
+            });
         });
-    });
 
     // Add pulse animation to footer logo
-    const footerLogo = document.querySelector('.footer-logo');
+    const footerLogo = document.querySelector(".footer-logo");
     if (footerLogo) {
         setInterval(() => {
-            footerLogo.style.animation = 'pulse 2s ease-in-out';
+            footerLogo.style.animation = "pulse 2s ease-in-out";
             setTimeout(() => {
-                footerLogo.style.animation = '';
+                footerLogo.style.animation = "";
             }, 2000);
         }, 5000);
     }

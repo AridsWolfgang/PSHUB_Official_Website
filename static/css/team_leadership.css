@@ -1,6 +1,6 @@
 /* =====================[TEAM PAGE STYLES]===================== */
 :root {
-  --primary: #0a0a0a;
+  /* --primary: #0a0a0a;
   --primary-dark: #0a1e36;
   --primary-light: #1e3a5f;
   --accent: #c7a254;
@@ -13,7 +13,7 @@
   --background-alt: #f8fafc;
   --background-dark: #0f172a;
   --border: #e9eef2;
-  --border-dark: #cbd5e1;
+  --border-dark: #cbd5e1; */
   --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.02);
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
   --shadow-md: 0 20px 35px rgba(0, 0, 0, 0.05);
