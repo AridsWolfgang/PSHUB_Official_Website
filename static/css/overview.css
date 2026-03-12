@@ -29,7 +29,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* 
 body {
     font-family: "Montserrat", sans-serif;
     line-height: 1.6;
@@ -42,7 +42,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2rem;
-}
+} */
 
 /* =====================[OVERVIEW HERO]===================== */
 .overview-hero {
@@ -1038,7 +1038,7 @@ body {
     gap: 1rem;
     justify-content: center;
 }
-
+/* 
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -1055,7 +1055,7 @@ body {
     background: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
-}
+} */
 
 .btn-secondary {
     display: inline-flex;

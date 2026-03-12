@@ -30,7 +30,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family:
     "Inter",
     -apple-system,
@@ -48,7 +48,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
-}
+} */
 
 /* =====================[ABOUT HERO]===================== */
 .about-hero {
@@ -1128,7 +1128,7 @@ body {
   gap: 1rem;
   justify-content: center;
 }
-
+/* 
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -1164,7 +1164,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-color: white;
   transform: translateY(-2px);
-}
+} */
 
 /* =====================[RESPONSIVE DESIGN]===================== */
 @media (max-width: 1024px) {

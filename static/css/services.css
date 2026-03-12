@@ -25,7 +25,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* 
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -37,7 +37,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2rem;
-}
+} */
 
 /* =====================[SERVICES HERO]===================== */
 .services-hero {
@@ -386,7 +386,7 @@ body {
     color: rgba(255,255,255,0.8);
     margin-bottom: 2rem;
 }
-
+/* 
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -403,7 +403,7 @@ body {
     background: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
-}
+} */
 
 /* =====================[RESPONSIVE]===================== */
 @media (max-width: 1024px) {

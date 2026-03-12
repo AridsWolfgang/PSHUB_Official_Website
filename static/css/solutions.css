@@ -30,7 +30,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text);
@@ -42,7 +42,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 2rem;
-}
+} */
 
 /* =====================[SOLUTIONS HERO]===================== */
 .solutions-hero {
@@ -502,7 +502,7 @@ tr:hover td {
     margin-bottom: 2rem;
 }
 
-.btn-primary {
+/* .btn-primary {
     display: inline-flex;
     align-items: center;
     padding: 1rem 2.5rem;
@@ -521,7 +521,7 @@ tr:hover td {
     background: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
-}
+} */
 
 /* =====================[ANIMATIONS]===================== */
 .solution-section {

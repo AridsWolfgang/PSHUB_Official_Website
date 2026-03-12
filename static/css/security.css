@@ -32,7 +32,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 body {
   font-family:
     "Inter",
@@ -51,7 +51,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
-}
+} */
 
 /* =====================[SECURITY HERO]===================== */
 .security-hero {
@@ -1141,7 +1141,7 @@ body {
   display: flex;
   gap: 1rem;
 }
-
+/* 
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -1158,7 +1158,7 @@ body {
   background: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-}
+} */
 
 .btn-outline-light {
   display: inline-flex;

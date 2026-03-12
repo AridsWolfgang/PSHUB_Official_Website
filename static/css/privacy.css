@@ -29,7 +29,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 body {
   font-family:
     "Inter",
@@ -48,7 +48,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
-}
+} */
 
 /* =====================[PRIVACY HERO]===================== */
 .privacy-hero {
@@ -846,7 +846,7 @@ body {
   margin-top: 2rem;
 }
 
-.btn-primary {
+/* .btn-primary {
   display: inline-flex;
   align-items: center;
   padding: 0.75rem 1.5rem;
@@ -865,8 +865,8 @@ body {
   color: white;
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-}
-
+} */
+/* 
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -884,7 +884,7 @@ body {
   border-color: var(--accent);
   background: var(--background-alt);
   transform: translateY(-2px);
-}
+} */
 
 /* =====================[PRIVACY CTA]===================== */
 .privacy-cta {

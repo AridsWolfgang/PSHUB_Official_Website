@@ -30,7 +30,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* 
 body {
   font-family:
     "Inter",
@@ -49,7 +49,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
-}
+} */
 
 /* =====================[BRIEFING HERO]===================== */
 .briefing-hero {
