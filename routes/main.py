@@ -57,3 +57,7 @@ def careers():
 @main.route("/overview")
 def overview():
     return render_template("overview.html")
+
+@main.route("/platform")
+def platform():
+    return render_template("platform.html")

@@ -308,12 +308,12 @@ body {
     margin: 0 auto 4rem;
 }
 
-.section-header h2 {
+/* .section-header h2 {
     font-size: 2.5rem;
     font-weight: 500;
     color: var(--primary-dark);
     margin-top: 1rem;
-}
+} */
 
 .delivery-grid {
     display: grid;

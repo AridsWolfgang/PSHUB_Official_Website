@@ -1,0 +1,387 @@
+{% extends "base.html" %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/platform.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<!-- =====================[PLATFORM HERO]===================== -->
+<section class="platform-hero">
+    <div class="container">
+        <div class="platform-hero-content">
+            <span class="hero-badge">The Platform</span>
+            <h1>Digital Infrastructure for Prosperity Systems</h1>
+            <p>An integrated operating system that connects institutions, capital, and people into one measurable
+                prosperity system.</p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[PLATFORM OVERVIEW]===================== -->
+<section class="overview-section">
+    <div class="container">
+        <div class="overview-grid">
+            <div class="overview-content">
+                <span class="section-badge">Overview</span>
+                <h2>What is the PSHub Platform?</h2>
+                <p class="lead-text">The PSHub (Prosperity System Hub) platforms represent a multi-layered digital
+                    ecosystem designed to transform sub-national development. Each platform serves a specific functional
+                    role in creating a more transparent, efficient, and inclusive economic landscape.</p>
+                <p>Together, these platforms dismantle traditional silos by creating a seamless flow of information
+                    between local wards, the national workforce, and global capital. The PSHub suite offers a radical
+                    rethink of development infrastructure, replacing top-down guesswork
+                    with a synchronized, data-driven approach to shared prosperity.</p>
+
+                <div class="key-points">
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>SLP+ tells you where the need and potential are located.</span>
+                    </div>
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>DLX+ provides the human capital and tools to drive economic activity.</span>
+                    </div>
+                    <div class="key-point">
+                        <i class="fas fa-check-circle"></i>
+                        <span>PIP provides the insight and oversight to ensure that development is measurable and
+                            successful.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-visual">
+                <div class="platform-diagram">
+                    <div class="diagram-node node-top">SLP+</div>
+                    <div class="diagram-node node-left">DLX+</div>
+                    <div class="diagram-node node-center">PSHub</div>
+                    <div class="diagram-node node-right">PIP</div>
+                    <!-- <div class="diagram-node node-bottom">Outcomes</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[CORE ARCHITECTURE]===================== -->
+<!-- <section class="architecture-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Core Architecture</span>
+            <h2>Three integrated layers</h2>
+            <p>The platform is built on a modular architecture that connects every element of prosperity systems</p>
+        </div>
+
+        <div class="layers-grid">
+            <div class="layer-card">
+                <div class="layer-icon opportunity">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Opportunity Layer</h3>
+                <p>Maps citizens, skills, programs, employers, and financing into a single opportunity pipeline
+                    architecture.</p>
+                <ul class="layer-features">
+                    <li>Talent pipeline mapping</li>
+                    <li>Program inventory & alignment</li>
+                    <li>Employer demand integration</li>
+                    <li>Financial aid pathways</li>
+                </ul>
+            </div>
+
+            <div class="layer-card featured">
+                <div class="layer-icon coordination">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Coordination Layer</h3>
+                <p>Aligns ministries, institutions, financial actors, and delivery partners inside one interoperable
+                    framework.</p>
+                <ul class="layer-features">
+                    <li>Cross-institutional governance</li>
+                    <li>Data sharing protocols</li>
+                    <li>Partner orchestration</li>
+                    <li>Service delivery integration</li>
+                </ul>
+            </div>
+
+            <div class="layer-card">
+                <div class="layer-icon intelligence">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Intelligence Layer</h3>
+                <p>Provides real-time visibility into talent flows, employment outcomes, capital efficiency, and
+                    systemic performance.</p>
+                <ul class="layer-features">
+                    <li>Real-time dashboards</li>
+                    <li>Predictive analytics</li>
+                    <li>Capital efficiency tracking</li>
+                    <li>Outcome verification</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- =====================[KEY CAPABILITIES]===================== -->
+<section class="capabilities-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Capabilities</span>
+            <h2>What the platform enables</h2>
+            <p>End-to-end capabilities for designing, operating, and optimizing prosperity systems</p>
+        </div>
+
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <i class="fas fa-draw-polygon"></i>
+                <h3>Ward-Level Mapping</h3>
+                <p>Enabling the detailed mapping of prosperity systems at the most granular level (wards)</p>
+            </div>
+            <div class="capability-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Data Driven Resouce Allocation</h3>
+                <p>It create space for precise sub-national planning, ensuring that resources and interventions are
+                    directed exactly where they are needed most.</p>
+            </div>
+            <div class="capability-card">
+                <i class="fa-solid fa-store"></i>
+                <h3>Marketplace Access</h3>
+                <p>It enables a national-scale connection between workers and the digital labor marketplace.</p>
+            </div>
+            <div class="capability-card">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h3>Skill Development</h3>
+                <p>Beyond just finding jobs, it facilitates the development of new skills to make workers more
+                    competitive.</p>
+            </div>
+            <div class="capability-card">
+                <i class="fa-solid fa-bridge-circle-check"></i>
+                <h3>Bridge to Opportunity</h3>
+                <p>It removes barriers between individual talent and institutional opportunities.</p>
+            </div>
+            <div class="capability-card">
+                <i class="fa-solid fa-chart-pie"></i>
+                <h3>Advanced Analytics</h3>
+                <p>It enables decision-makers and investors to access AI-powered insights into sub-national development.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[TECHNICAL ARCHITECTURE]===================== -->
+<section class="technical-section">
+    <div class="container">
+        <div class="technical-grid">
+            <div class="technical-content">
+                <span class="section-badge">Technical Architecture</span>
+                <h2>Built for scale and security</h2>
+                <p>Enterprise-grade infrastructure designed for government and institutional requirements</p>
+
+                <div class="tech-features">
+                    <div class="tech-feature">
+                        <i class="fas fa-cloud"></i>
+                        <div>
+                            <h4>Cloud-Native</h4>
+                            <p>Built on AWS and Azure with auto-scaling and high availability</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <i class="fas fa-lock"></i>
+                        <div>
+                            <h4>End-to-End Encryption</h4>
+                            <p>AES-256 at rest, TLS 1.3 in transit, customer-managed keys available</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <i class="fas fa-code-branch"></i>
+                        <div>
+                            <h4>API-First Design</h4>
+                            <p>RESTful APIs for seamless integration with existing systems</p>
+                        </div>
+                    </div>
+                    <div class="tech-feature">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h4>Real-Time Analytics</h4>
+                            <p>Streaming data processing with sub-second latency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technical-visual">
+                <div class="tech-stack">
+                    <div class="tech-item">Apache Spark</div>
+                    <div class="tech-item">Python</div>
+                    <div class="tech-item">Kubernetes</div>
+                    <div class="tech-item">PostgreSQL</div>
+                    <div class="tech-item">Apache Kafka</div>
+                    <div class="tech-item">React.js</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[INTEGRATION ECOSYSTEM]===================== -->
+<!-- <section class="integration-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Integration</span>
+            <h2>Connect with your existing systems</h2>
+            <p>PSHub integrates with the tools and platforms you already use</p>
+        </div>
+
+        <div class="integration-grid">
+            <div class="integration-category">
+                <h3>HRIS & Workforce</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Workday</li>
+                    <li><i class="fas fa-check"></i> SAP SuccessFactors</li>
+                    <li><i class="fas fa-check"></i> Oracle HCM</li>
+                    <li><i class="fas fa-check"></i> ADP</li>
+                </ul>
+            </div>
+            <div class="integration-category">
+                <h3>Financial Systems</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> SAP</li>
+                    <li><i class="fas fa-check"></i> Oracle Financials</li>
+                    <li><i class="fas fa-check"></i> QuickBooks</li>
+                    <li><i class="fas fa-check"></i> Xero</li>
+                </ul>
+            </div>
+            <div class="integration-category">
+                <h3>Case Management</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Salesforce</li>
+                    <li><i class="fas fa-check"></i> Microsoft Dynamics</li>
+                    <li><i class="fas fa-check"></i> ServiceNow</li>
+                    <li><i class="fas fa-check"></i> ZenDesk</li>
+                </ul>
+            </div>
+            <div class="integration-category">
+                <h3>Data & Analytics</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Tableau</li>
+                    <li><i class="fas fa-check"></i> Power BI</li>
+                    <li><i class="fas fa-check"></i> Snowflake</li>
+                    <li><i class="fas fa-check"></i> Databricks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- =====================[DEPLOYMENT MODELS]===================== -->
+<section class="deployment-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Deployment</span>
+            <h2>Flexible deployment options</h2>
+            <p>Configured to meet your institutional requirements</p>
+        </div>
+
+        <div class="deployment-grid">
+            <div class="deployment-card">
+                <i class="fas fa-cloud"></i>
+                <h3>SaaS / Public Cloud</h3>
+                <p>Fully managed multi-tenant deployment with automatic updates</p>
+            </div>
+            <div class="deployment-card">
+                <i class="fas fa-lock"></i>
+                <h3>Private Cloud</h3>
+                <p>Dedicated single-tenant environment in your preferred cloud</p>
+            </div>
+            <div class="deployment-card">
+                <i class="fas fa-server"></i>
+                <h3>On-Premise</h3>
+                <p>Deployed within your own data centers for maximum control</p>
+            </div>
+            <div class="deployment-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Government Cloud</h3>
+                <p>AWS GovCloud, Azure Government, and other certified environments</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================[SECURITY & COMPLIANCE]===================== -->
+<!-- <section class="security-compliance-section">
+    <div class="container">
+        <div class="compliance-grid">
+            <div class="compliance-badge">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <h3>Enterprise Security</h3>
+                    <p>SOC 2 Type II certified • ISO 27001 • GDPR compliant</p>
+                </div>
+            </div>
+            <p>Our platform meets the highest standards of security, privacy, and compliance required by governments and
+                financial institutions.</p>
+            <a href="/security" class="btn-outline">View Security Overview <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section> -->
+
+<!-- =====================[CASE STUDIES PREVIEW]===================== -->
+<!-- <section class="case-studies-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">In Action</span>
+            <h2>Trusted by leading institutions</h2>
+        </div>
+
+        <div class="cases-grid">
+            <div class="case-card">
+                <div class="case-flag"><i class="fas fa-flag-usa"></i></div>
+                <h3>US Economic Development Administration</h3>
+                <p>Workforce system integration across 12 states, connecting 200+ programs to employer demand.</p>
+                <a href="#" class="case-link">Read case study <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="case-card">
+                <div class="case-flag"><i class="fas fa-flag"></i></div>
+                <h3>African Development Bank</h3>
+                <p>Capital deployment framework for youth employment initiatives across 8 countries.</p>
+                <a href="#" class="case-link">Read case study <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="case-card">
+                <div class="case-flag"><i class="fas fa-flag-uk"></i></div>
+                <h3>UK Cabinet Office</h3>
+                <p>Cross-departmental prosperity system connecting 14 agencies and 200+ programs.</p>
+                <a href="#" class="case-link">Read case study <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- =====================[CTA SECTION]===================== -->
+<!-- <section class="platform-cta">
+    <div class="container">
+        <div class="cta-box">
+            <h2>Ready to see the platform in action?</h2>
+            <p>Schedule a tailored demo with our solutions team</p>
+            <a href="/briefing" class="btn-primary">Request a Demo</a>
+        </div>
+    </div>
+</section> -->
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.layer-card, .capability-card, .deployment-card, .case-card, .integration-category').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+{% endblock %}

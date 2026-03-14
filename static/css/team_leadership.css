@@ -28,26 +28,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* 
-body {
-  font-family:
-    "Inter",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--background);
-  -webkit-font-smoothing: antialiased;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
-} */
 
 /* =====================[TEAM HERO]===================== */
 .team-hero {
@@ -175,7 +155,7 @@ body {
 .section-header h2 {
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--primary-dark);
+  color: var(--background);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
@@ -372,6 +352,7 @@ body {
     );
   z-index: -1;
 }
+
 
 .board-grid {
   display: grid;
