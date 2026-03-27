@@ -1,0 +1,14 @@
+# robots.txt for ps-hub.org
+User-agent: *
+Allow: /
+
+# Block sensitive files and directories
+Disallow: /static/*.py$
+Disallow: /*.py$
+Disallow: /*.pyc$
+Disallow: /.git/
+Disallow: /venv/
+Disallow: /env/
+
+# Tell search engines where to find your sitemap
+Sitemap: https://www.ps-hub.org/sitemap.xml

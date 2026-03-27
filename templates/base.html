@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Prosperity System Hub | Home</title>
+    <title>Prosperity Systems Hub | Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}" />
@@ -21,13 +21,52 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/platform.css') }}" />
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
+
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Prosperity Systems Hub">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow">
+
+    <!-- Dynamic Title & Description -->
+    <title>{{ title | default('Prosperity System Hub') }} | Official Website</title>
+    <meta name="description"
+        content="{{ description | default('The official web presence for Prosperity Systems Hub – an integrated infrastructure platform converting population potential into measurable economic outcomes.') }}">
+
+    <!-- Canonical URL (avoid duplicate content) -->
+    <link rel="canonical" href="{{ current_url | default(request.url) }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ current_url | default(request.url) }}">
+    <meta property="og:title" content="{{ og_title | default(title) | default('Prosperity Systems Hub') }}">
+    <meta property="og:description"
+        content="{{ og_description | default(description) | default('An integrated infrastructure platform enabling governments, institutions, and markets to design and operate systems that convert population potential into measurable economic outcomes.') }}">
+    <meta property="og:image"
+        content="{{ og_image | default(url_for('static', filename='img/logo.png', _external=True)) }}">
+    <meta property="og:site_name" content="Prosperity Systems Hub">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ current_url | default(request.url) }}">
+    <meta name="twitter:title" content="{{ twitter_title | default(title) | default('Prosperity Systems Hub') }}">
+    <meta name="twitter:description"
+        content="{{ twitter_description | default(description) | default('The official platform for designing prosperity infrastructure at institutional scale.') }}">
+    <meta name="twitter:image"
+        content="{{ twitter_image | default(og_image) | default(url_for('static', filename='img/logo.png', _external=True)) }}">
+    <meta name="twitter:site" content="@ProsperityHub"> <!-- Replace with actual Twitter handle if exists -->
+
+    <!-- Optional: Keywords (less important but can be added) -->
+    <meta name="keywords"
+        content="prosperity infrastructure, economic outcomes, institutional platform, population potential, government solutions, Prosperity Systems Hub">
 </head>
 
 <body>
@@ -51,7 +90,7 @@
                 <!-- <li class="nav-item">
                     <a href="{{ url_for('main.solutions') }}" class="nav-link">Solutions</a>
                 </li> -->
-                  <li class="nav-item">
+                <li class="nav-item">
                     <a href="{{ url_for('main.platform') }}" class="nav-link">Platforms</a>
                 </li>
                 <!-- <li class="nav-item">
@@ -136,7 +175,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div>© Prosperity System Hub — Infrastructure for prosperity</div>
+                <div>© Prosperity Systems Hub — Infrastructure for prosperity</div>
                 <div>
                     <a href="{{ url_for('main.home') }}">Privacy</a>
                     <a href="{{ url_for('main.home') }}">Security</a>
